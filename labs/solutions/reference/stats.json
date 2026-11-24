@@ -51,17 +51,15 @@
    "first_half_share": 0.5,
    "against_applicant_share": 0.5,
    "types": {
-    "T1": 0,
-    "T2": 0,
-    "T3": 0,
-    "T4": 0,
-    "T5": 0,
-    "T6": 0
+    "C1": 2,
+    "C2": 2,
+    "C3": 2,
+    "C4": 2
    },
    "correct_decisions": {
-    "approve": 0,
-    "request": 0,
-    "refuse": 0
+    "none": 14,
+    "warning": 13,
+    "fine": 13
    }
   }
  },

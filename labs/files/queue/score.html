@@ -17,6 +17,7 @@ table{border-collapse:collapse;width:100%;font-size:.9rem}td,th{border:1px solid
 .ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
 .note{font-size:.85rem;color:var(--muted)}
 label{display:block;margin:.3rem 0}
+@media (max-width:640px){table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}table.cards tr:first-child{display:none}table.cards tr{border:1px solid var(--line);border-radius:.4rem;margin:.5rem 0;background:#fff}table.cards td{border:0;border-bottom:1px solid #eef2f4}table.cards td::before{content:attr(data-label) ": ";font-weight:600}}
 </style>
 </head>
 <body>
@@ -49,13 +50,13 @@ label{display:block;margin:.3rem 0}
   function leverNames(s) { return s ? s.split('+').map(function (x) { return LEVER[x] || x; }).join('، ') : 'لا شيء'; }
   function el(tag, txt) { var e = document.createElement(tag); if (txt !== undefined) e.textContent = txt; return e; }
   function pct(x) { return (x * 100).toFixed(1) + '%'; }
-  function row(t, cells, head) { var tr = el('tr'); cells.forEach(function (c) { tr.appendChild(el(head ? 'th' : 'td', String(c))); }); t.appendChild(tr); }
+  function row(t, cells, head) { var tr = el('tr'); if (head) t._heads = cells; cells.forEach(function (c, i) { var cell = el(head ? 'th' : 'td', String(c)); if (!head && t._heads) cell.setAttribute('data-label', t._heads[i]); tr.appendChild(cell); }); t.appendChild(tr); }
   function draw() {
     var out = document.getElementById('out'); out.innerHTML = '';
     if (!logs.length || !key) return;
     var all = []; logs.forEach(function (t) { all = all.concat(QueueLib.parseCsv(t)); });
     var sessions = QueueLib.groupSessions(all);
-    var t = el('table');
+    var t = el('table'); t.className = 'cards';
     row(t, ['الجلسة', 'المجموعة', 'الأدوات', 'أخطاء مزروعة', 'اكتُشف', 'معدل الاكتشاف', 'فترة الثقة 95%', 'التجاوز الخاطئ', 'التصعيد', 'انتهاء الوقت', 'وسيط الثواني', 'الحكم'], true);
     var pooled = {};
     Object.keys(sessions).forEach(function (id) {

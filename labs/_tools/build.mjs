@@ -393,7 +393,7 @@ const B = buildSet('B');
 const C = buildC();
 
 // matching of A and B
-function profile(key) {
+function profile(key, types = ERROR_TYPES, decisions = DECISIONS) {
   const seeded = Object.values(key).filter((k) => k.seeded);
   const count = (f) => seeded.filter(f).length;
   return {
@@ -402,15 +402,15 @@ function profile(key) {
     documents_only_share: r3(count((k) => k.visibility === 'documents') / seeded.length),
     first_half_share: r3(count((k) => k.half === 'first') / seeded.length),
     against_applicant_share: r3(count((k) => k.direction === 'against-applicant') / seeded.length),
-    types: Object.fromEntries(Object.keys(ERROR_TYPES).map((t) => [t, count((k) => k.type === t)])),
-    correct_decisions: Object.fromEntries(['approve', 'request', 'refuse'].map((d) => [d, Object.values(key).filter((k) => k.correct === d).length])),
+    types: Object.fromEntries(Object.keys(types).map((t) => [t, count((k) => k.type === t)])),
+    correct_decisions: Object.fromEntries(Object.keys(decisions).map((d) => [d, Object.values(key).filter((k) => k.correct === d).length])),
   };
 }
 
 const data = {
-  A: { label: 'المجموعة A · 60 طلبًا', options: DECISIONS, rulesTitle: 'قواعد التصاريح', rules: RULES, cases: A.cases },
-  B: { label: 'المجموعة B · 40 طلبًا (بعد إعادة التصميم)', options: DECISIONS, rulesTitle: 'قواعد التصاريح', rules: RULES, cases: B.cases },
-  C: { label: 'المجموعة C · 40 محضرًا (مهمة المتابعة)', options: C_DECISIONS, rulesTitle: 'جدول المخالفات', rules: C_RULES, cases: C.cases },
+  A: { label: 'المجموعة A · 60 طلبًا', options: DECISIONS, rulesTitle: 'قواعد التصاريح', rules: RULES, system: '«مُرجِّح»', item: 'الطلب', cases: A.cases },
+  B: { label: 'المجموعة B · 40 طلبًا (بعد إعادة التصميم)', options: DECISIONS, rulesTitle: 'قواعد التصاريح', rules: RULES, system: '«مُرجِّح»', item: 'الطلب', cases: B.cases },
+  C: { label: 'المجموعة C · 40 محضرًا (مهمة المتابعة)', options: C_DECISIONS, rulesTitle: 'قواعد المخالفات', rules: C_RULES, system: 'مساعد إشعارات المخالفات', item: 'المحضر', cases: C.cases },
 };
 
 const tpl = fs.readFileSync(path.join(here, 'queue.tpl.html'), 'utf8');
@@ -478,7 +478,7 @@ const p70ge10 = [10, 11, 12].reduce((s, k) => s + binom(12, k, 0.7), 0);
 
 const stats = {
   generated_by: 'labs/_tools/build.mjs',
-  queue_profiles: { A: profile(A.key), B: profile(B.key), C: profile(C.key) },
+  queue_profiles: { A: profile(A.key), B: profile(B.key), C: profile(C.key, C_ERROR_TYPES, C_DECISIONS) },
   baseline_R07: {
     seeded: baseScore.seeded, caught: baseScore.caught, detection: r3(baseScore.detection), interval: baseScore.interval.map(r3),
     verdict: baseScore.verdict, false_overrides: baseScore.falseOverrides, correct_recs: baseScore.correctRecs, false_override_rate: r3(baseScore.falseOverrideRate),

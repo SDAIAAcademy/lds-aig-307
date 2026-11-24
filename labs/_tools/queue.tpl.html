@@ -38,12 +38,12 @@ table{border-collapse:collapse;width:100%;font-size:.9rem}td,th{border:1px solid
 </head>
 <body>
 <main>
-<div class="bar">ملف تدريبي · أمانة مدينة الجثجاث جهة افتراضية، والطلبات اصطناعية · توصيات «مُرجِّح» هنا مكتوبة مسبقًا في ملف البيانات (محاكاة)، لا يولدها نموذج · المقرر <span class="ltr">LDS-AIG-307</span></div>
+<div class="bar">ملف تدريبي · أمانة مدينة الجثجاث جهة افتراضية، والحالات اصطناعية · التوصيات هنا مكتوبة مسبقًا في ملف البيانات (محاكاة)، لا يولدها نموذج · المقرر <span class="ltr">LDS-AIG-307</span></div>
 <h1>قائمة انتظار المراجعة</h1>
 
 <section id="start" class="card">
   <h2>قبل أن تبدأ</h2>
-  <p>تعمل وحدك ودون أي أداة ذكاء اصطناعي. لكل حالة 45 ثانية. إن انتهى الوقت قبل أن تقرر تبقى توصية «مُرجِّح» كما هي، كما يحدث في قائمة حقيقية مزدحمة.</p>
+  <p>تعمل وحدك ودون أي أداة ذكاء اصطناعي. لكل حالة 45 ثانية. إن انتهى الوقت قبل أن تقرر تبقى التوصية كما هي، كما يحدث في قائمة حقيقية مزدحمة.</p>
   <label>رمز الجلسة الذي أعطاك إياه المدرب (لا تكتب اسمك): <input type="text" id="session" maxlength="20" placeholder="P-01"></label>
   <label>المجموعة: <select id="set"></select></label>
   <fieldset id="levers" class="card">
@@ -64,7 +64,7 @@ table{border-collapse:collapse;width:100%;font-size:.9rem}td,th{border:1px solid
 
 <section id="work" class="hidden">
   <div class="card head"><b id="progress"></b><span class="timer" id="timer">45</span></div>
-  <div class="card"><h2>ملخص الطلب كما استخرجه «مُرجِّح»</h2><dl id="summary"></dl>
+  <div class="card"><h2>ملخص <span class="itemname">الطلب</span> كما استخرجه <span class="sysname">«مُرجِّح»</span></h2><dl id="summary"></dl>
     <button id="toggleDocs">عرض المستندات الأصلية</button>
     <div id="docs" class="hidden"></div>
   </div>
@@ -74,7 +74,7 @@ table{border-collapse:collapse;width:100%;font-size:.9rem}td,th{border:1px solid
     <label><input type="checkbox" class="chk"> حددت القاعدة التي تحكم القرار</label>
   </div>
   <div id="ownBox" class="card hidden"><h2>قرارك قبل رؤية التوصية</h2><div id="ownButtons"></div></div>
-  <div id="recBox" class="card rec"><h2>توصية «مُرجِّح»: <span id="recText"></span></h2><p id="recReason"></p><p id="recConf" class="hidden"></p>
+  <div id="recBox" class="card rec"><h2>توصية <span class="sysname">«مُرجِّح»</span>: <span id="recText"></span></h2><p id="recReason"></p><p id="recConf" class="hidden"></p>
     <div id="actButtons"></div>
   </div>
 </section>
@@ -119,6 +119,8 @@ table{border-collapse:collapse;width:100%;font-size:.9rem}td,th{border:1px solid
     var set = DATA[sel.value];
     state = { code: code, setKey: sel.value, set: set, levers: levers, i: 0, log: [] };
     text($('rulesTitle'), set.rulesTitle);
+    Array.prototype.forEach.call(document.querySelectorAll('.sysname'), function (e) { e.textContent = set.system; });
+    Array.prototype.forEach.call(document.querySelectorAll('.itemname'), function (e) { e.textContent = set.item; });
     var ol = $('rulesList'); ol.innerHTML = '';
     set.rules.forEach(function (r) { ol.appendChild(make('li', r.id + ': ' + r.text)); });
     $('start').classList.add('hidden'); $('rules').classList.remove('hidden'); $('work').classList.remove('hidden');
