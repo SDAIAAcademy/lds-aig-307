@@ -1,91 +1,150 @@
 <section class="slide title" id="title" data-auto="title">
-  <aside class="notes">اليوم لهم: اقصر كلامك على الافتتاح والختام. تأكّد أولًا من ترتيب العروض وتجهيزات التجربة الحية (مشاركة الشاشة، والحسابات، ونسخة مسجلة احتياطية).</aside>
+  <aside class="notes"><p>المراجعة أمام اللجنة تسعون دقيقة، ومهمة المتابعة ثلاثون دقيقة خلال خمسة أيام عمل. اثنا عشر مشاركًا على الأكثر ومقيِّمان، ولجان من ثلاثة. قبل البدء: اطبع بطاقات رفع الاستقلالية (A وB وC) من <code>labs/solutions/reference/capstone_key.md</code>، بطاقة لكل مشارك، ووزعها بحيث لا تتكرر البطاقة في اللجنة الواحدة. المفتاح للمقيِّمين وحدهم.</p></aside>
 </section>
 
 <section class="slide" id="agenda" data-label="الجدول">
-  <div class="kicker">المشروع الختامي</div>
-  <h2>كيف تسير العروض</h2>
-  <div class="agenda">
-    <div class="item now"><div><b>التوقعات والتحضير الأخير</b><small>سلم التقدير، وتدريب أخير، ثم أول العروض</small></div></div>
-    <div class="item"><div><b>العروض</b><small>كل عرض بوقت محدد تليه الأسئلة</small></div></div>
-    <div class="item"><div><b>المراجعة والختام</b><small>تعليقات الأقران، ومراجعة المدرّب، وما بعد المقرر</small></div></div>
+  <div class="kicker">المراجعة أمام اللجنة</div>
+  <h2>تسعون دقيقة في القاعة، وثلاثون بعدها</h2>
+  <table class="t small">
+    <tr><th>الجزء</th><th>الدقائق</th><th>الذكاء الاصطناعي</th></tr>
+    <tr><td>الإحاطة: النظام، والتسليم، والسلم</td><td>5</td><td>مغلق</td></tr>
+    <tr><td>صياغة التصميم</td><td>30</td><td>كامل</td></tr>
+    <tr><td>ثلاث جولات: 6 للعرض، و6 للأسئلة وبطاقة رفع الاستقلالية، و4 لسجل القرار، ودقيقة للتبديل</td><td>51</td><td>حوار مباشر، لا يُستخدم</td></tr>
+    <tr><td>التسليم</td><td>4</td><td></td></tr>
+    <tr><td>مهمة المتابعة خلال خمسة أيام عمل</td><td>30</td><td>لا يُستخدم في القائمة</td></tr>
+  </table>
+  <aside class="notes"><p>المجموع في القاعة: 5 و30 و51 و4، أي تسعون. الجولة 17 دقيقة. مستويات الكتالوج: ذكاء اصطناعي كامل في صياغة المشروع، ويُناقَش مباشرة؛ وقائمة الانتظار في مهمة المتابعة دون ذكاء اصطناعي. إعادة ضبط العتبات بعد البطاقة تجري أمام اللجنة دون أداة: هي قاعدة الأصالة.</p></aside>
+</section>
+
+<section class="slide" id="the-system" data-label="النظام" data-lo="LO1 LO2">
+  <div class="kicker">نظام ثالث في الخدمة</div>
+  <h2>مساعد إشعارات المخالفات ووكيله، قبل أن يُوسَّعا</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>يقرأ المساعد تقرير المعاينة وسجل التصريح، ويوصي: لا مخالفة، أو إنذار، أو غرامة.</li>
+      <li>يراجع موظف التوصية، ثم ينفذ الوكيل سبعة أنواع من الإجراءات.</li>
+      <li>اليوم يوقع مراقب على كل غرامة وتعليق. ولم يُقس قط ما يلتقطه الموظف.</li>
+    </ul>
+    <div class="card c-teal"><h4>الملفات</h4><p class="small mb0"><span class="ltr">labs/files/capstone/system_brief.html</span><br><span class="ltr">capstone_actions.csv</span>: 120 إجراءً سابقًا<br><span class="ltr">thresholds_capstone_start.json</span>، و<span class="ltr">design_template.md</span></p></div>
   </div>
+  <div class="callout note mt"><b>أدواتك أدوات المقرر.</b> قائمة الانتظار، وصفحة الحساب، و<span class="ltr">replay.py</span>، وإجراء اللجنة الذي أكملته.</div>
+  <aside class="notes"><p>اقرأ الإحاطة بصوت عالٍ، ولا تزد عليها. لا تجب عن أسئلة التصنيف: هي عمل المشاركين. أجب فقط عن أسئلة الملفات وتشغيل البرنامج. دقيقتان من الإحاطة.</p></aside>
+</section>
+
+<section class="slide" id="deliverables" data-label="التسليم" data-lo="LO1 LO2 LO3 LO4 LO5">
+  <div class="kicker">ما تسلّمه</div>
+  <h2>مجلد واحد في Google Drive، عمل فردي</h2>
+  <div class="cols cols-2">
+    <ol class="bullets">
+      <li>وثيقة التصميم بأقسامها الخمسة.</li>
+      <li>ملف العتبات قبل البطاقة وبعدها، وناتج إعادة التشغيل.</li>
+      <li>سجل القرار الذي كتبته عضوًا في لجنة زميل.</li>
+    </ol>
+    <ol class="bullets" start="4">
+      <li>سجل جلسة القائمة C أو أرقام قائمة حقيقية، مع بطاقة النتيجة.</li>
+      <li>سجل جلسات المساعد إن استُخدم.</li>
+    </ol>
+  </div>
+  <div class="callout warn mt"><b>البيانات.</b> لا يُدخل في أي أداة ذكاء اصطناعي إلا ما يُصنف «عام»، وهذه قاعدة الجهة في الحالة. ملفات المشروع اصطناعية ومصنفة «عام». ولا يدخل شيء من عمل جهتك.</div>
+  <aside class="notes"><p>البنود الخمسة هي نص التسليم في بيان المقرر. وقل من الآن: في مهمة المتابعة على قائمة حقيقية لا يخرج من جهة المشارك إلا الأرقام المجمعة. دقيقة.</p></aside>
 </section>
 
 <section class="slide" id="rubric" data-label="سلم التقدير">
-  <div class="kicker">كيف تُقيَّم العروض</div>
-  <h2>سلم التقدير</h2>
+  <div class="kicker">كيف يُقيَّم المشروع</div>
+  <h2>مئة درجة على خمسة معايير، ولا يُقيَّم شيء مرتين</h2>
   <div class="bars">
-    <div class="row"><span>REPLACE: المعيار 1 من سلم التقدير ووزنه (مجموع الأوزان 100)</span><div class="bar c-teal" style="--w:100%"></div><span class="val">25%</span></div>
-    <div class="row"><span>REPLACE: المعيار 2 من سلم التقدير ووزنه (مجموع الأوزان 100)</span><div class="bar c-cyan" style="--w:100%"></div><span class="val">25%</span></div>
-    <div class="row"><span>REPLACE: المعيار 3 من سلم التقدير ووزنه (مجموع الأوزان 100)</span><div class="bar c-coral" style="--w:80%"></div><span class="val">20%</span></div>
-    <div class="row"><span>REPLACE: المعيار 4 من سلم التقدير ووزنه (مجموع الأوزان 100)</span><div class="bar c-purple" style="--w:80%"></div><span class="val">20%</span></div>
-    <div class="row"><span>REPLACE: المعيار 5 من سلم التقدير ووزنه (مجموع الأوزان 100)</span><div class="bar c-amber" style="--w:40%"></div><span class="val">10%</span></div>
+    <div class="row"><span>نموذج الإشراف وخطة القياس</span><div class="bar c-teal" style="--w:100%"></div><span class="val">20%</span></div>
+    <div class="row"><span>العتبات وإعادة ضبطها بعد البطاقة</span><div class="bar c-cyan" style="--w:100%"></div><span class="val">20%</span></div>
+    <div class="row"><span>مسار التظلم والإشعار بلغتين</span><div class="bar c-coral" style="--w:100%"></div><span class="val">20%</span></div>
+    <div class="row"><span>مراجعة الأخلاقيات وسجل القرار في لجنة زميل</span><div class="bar c-purple" style="--w:100%"></div><span class="val">20%</span></div>
+    <div class="row"><span>مهمة المتابعة: الاكتشاف بفترة الثقة والحكم</span><div class="bar c-amber" style="--w:100%"></div><span class="val">20%</span></div>
   </div>
-  <div class="callout tip mt"><b>اعرض نتائج من تجربتين مقيستين على الأقل.</b> الادعاء بلا رقم خطة لا نتيجة.</div>
-  <aside class="notes">اشرح كل معيار بمثال واحد لما تبدو عليه الدرجة الكاملة.</aside>
+  <div class="callout note mt"><b>والمقرر كله.</b> المشروع الختامي والمناقشة 45%، والمختبرات 35%، والاختبار القصير 20%. النجاح 70% إجمالًا، و60% في الاختبار القصير.</div>
+  <aside class="notes"><p>اشرح كل معيار بما يجعله كاملًا: نموذج لكل قرار مع الصلاحية والكفاءة والوقت؛ ولا ضار يمر دون أن يُرى ضمن الطاقة، مع حق إيقاف وفصل مهام؛ ومهل وإنسان آخر يعيد القرار وقناة غير رقمية؛ وإجراء مطبق على النظام وسجل قرار بشروط قابلة للتحقق؛ وحكم بالقاعدة لا بالمعدل. المختبرات قُدرت على نسخها في القاعة، والمشروع على نظام آخر وقائمة أخرى. دقيقتان.</p></aside>
 </section>
 
-<section class="slide" id="format" data-label="الصيغة">
-  <div class="kicker">الصيغة</div>
-  <h2>REPLACE: كم دقيقة يستغرق كل عرض وأسئلته</h2>
+<section class="slide dark" id="drafting" data-label="الصياغة">
+  <div class="kicker">ذكاء اصطناعي كامل</div>
+  <h1>صياغة التصميم · 30 د</h1>
+  <div class="timer" data-minutes="30"></div>
+  <p class="lead">شغّل <span class="ltr">replay.py</span> على عتباتك، واملأ أقسام القالب. احفظ سجل جلسات المساعد.</p>
+  <aside class="notes"><p>اضغط T لتشغيل المؤقت. مر على المشاركين في الدقيقة الخامسة عشرة: هل شغّل كل منهم إعادة التشغيل مرة على الأقل؟ من لم يعمل عنده البرنامج يعمل مع زميل في اللجنة نفسها. لا تجب عن أسئلة «هل هذا صحيح؟»: اسأل «ماذا يقول الناتج؟».</p></aside>
+</section>
+
+<section class="slide" id="board-rounds" data-label="الجولات" data-lo="LO4 LO5">
+  <div class="kicker">ثلاث جولات من 17 دقيقة</div>
+  <h2>كل مشارك يعرض مرة، ويجلس عضوًا مرتين</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>6 د · العرض</b>النموذج، والعتبات وناتجها، والمسار، والإجراء مطبقًا</div>
+    <div class="arrow">←</div>
+    <div class="step c-amber"><b>6 د · الأسئلة</b>يرفع المقيِّم الاستقلالية ببطاقة، فتعيد ضبط العتبات أمام اللجنة</div>
+    <div class="arrow">←</div>
+    <div class="step c-purple"><b>4 د · سجل القرار</b>يكتبه العضوان بالقالب، ويسجل كل منهما رأيه إن خالف</div>
+    <div class="arrow">←</div>
+    <div class="step c-navy"><b>1 د · التبديل</b>يجلس العارض عضوًا، ويعرض التالي</div>
+  </div>
+  <div class="callout note mt"><b>سجل القرار.</b> بقالب المختبر 2.1، ويدخل مجلد الكاتب لا مجلد العارض.</div>
+  <aside class="notes"><p>كل مقيِّم يتابع لجنتين. إن لم يقبل العدد القسمة على ثلاثة، جلس المقيِّم عضوًا ثالثًا في لجنة من اثنين، فتكون فيها جولتان. سجل القرار يكتبه كل عضو بنفسه، ويُقدَّر في معيار مراجعة الأخلاقيات لكاتبه.</p></aside>
+</section>
+
+<section class="slide" id="autonomy-raise" data-label="رفع الاستقلالية" data-lo="LO2">
+  <div class="kicker">في دقائق الأسئلة</div>
+  <h2>بطاقة واحدة ترفع ما يفعله الوكيل دون إنسان</h2>
   <div class="cols cols-3">
-    <div class="card c-teal"><h4>1 · المشكلة</h4><p class="small mb0">من، وماذا، ولماذا الآن. شريحة واحدة.</p></div>
-    <div class="card c-cyan"><h4>2 · ما بنيته</h4><p class="small mb0">التصميم والقرارات والموازنات، ثم التجربة الحية.</p></div>
-    <div class="card c-coral"><h4>3 · ما قسته</h4><p class="small mb0">خط الأساس، والتحسن، والإخفاقات، والخطوة التالية.</p></div>
+    <div class="card c-teal"><h4>ما تفعله</h4><p class="small mb0">تقرأ البطاقة، وتقرر هل تغير التصنيف أو المصفوفة أو الاستثناءات، وتعيد التشغيل إن أمكن.</p></div>
+    <div class="card c-amber"><h4>ما تقوله</h4><p class="small mb0">ما تغير في الضار الذي يتوقف أو يُعرف بالإخطار أو يمر، وفي العبء اليومي.</p></div>
+    <div class="card c-coral"><h4>ما تسأله</h4><p class="small mb0">هل يحفز التغيير مراجعة اللجنة بإجرائك؟ ومن يملك إيقافه؟</p></div>
   </div>
-  <div class="callout note mt"><b>تعليقات الأقران.</b> بعد كل عرض يكتب كل مشارك نقطة قوة وسؤالًا واقتراحًا.</div>
-</section>
-
-<section class="slide order" id="running-order" data-label="ترتيب العروض">
-  <div class="kicker">ترتيب العروض</div>
-  <h2>من يعرض ومتى</h2>
-  <table class="t small">
-    <tr><th>#</th><th>المشارك</th><th>المشروع</th></tr>
-    <tr><td>1</td><td><input placeholder="الاسم"></td><td><input placeholder="المشروع"></td></tr>
-    <tr><td>2</td><td><input placeholder="الاسم"></td><td><input placeholder="المشروع"></td></tr>
-    <tr><td>3</td><td><input placeholder="الاسم"></td><td><input placeholder="المشروع"></td></tr>
-    <tr><td>4</td><td><input placeholder="الاسم"></td><td><input placeholder="المشروع"></td></tr>
-    <tr><td>5</td><td><input placeholder="الاسم"></td><td><input placeholder="المشروع"></td></tr>
-    <tr><td>6</td><td><input placeholder="الاسم"></td><td><input placeholder="المشروع"></td></tr>
-    <tr><td>7</td><td><input placeholder="الاسم"></td><td><input placeholder="المشروع"></td></tr>
-    <tr><td>8</td><td><input placeholder="الاسم"></td><td><input placeholder="المشروع"></td></tr>
-  </table>
-  <aside class="notes">اكتب الأسماء في البداية؛ الحقول قابلة للتحرير أثناء العرض ولا تُحفظ، فاحتفظ بالقائمة في ملاحظاتك.</aside>
-</section>
-
-<section class="slide dark" id="final-prep" data-label="قبل أول عرض">
-  <div class="kicker">قبل أول عرض</div>
-  <h1>التحضير الأخير · 20 د</h1>
-  <div class="timer" data-minutes="20"></div>
-  <p class="lead">تدرّب مرة، وسجّل نسخة احتياطية، وجرّب العرض على هذه الشاشة.</p>
-  <aside class="notes">اضغط T لتشغيل المؤقّت. الاستراحات ليست شرائح: اضغط B حين تحتاجها القاعة.</aside>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> تخفيف العتبات لأن البطاقة طلبت ذلك. البطاقة تغير ما يفعله الوكيل، لا ما يقبله الإشراف.</div>
+  <aside class="notes"><p>البطاقات الثلاث وإعادات ضبطها المرجعية في <code>capstone_key.md</code>، مع ناتج إعادة التشغيل لما يظهر في السجل. ما لا يظهر في السجل يقدّره المشارك بصوت عالٍ: يُقدَّر التقدير لا الرقم. سجّل ما قاله في ورقة التقدير قبل أن ينتهي الوقت.</p></aside>
 </section>
 
 <section class="slide dark presenting" id="now-presenting" data-label="يعرض الآن">
   <div class="kicker center">يعرض الآن</div>
-  <div class="center"><input placeholder="المشارك · المشروع"></div>
-  <aside class="notes">اكتب اسم المشارك واضغط T لتشغيل المؤقّت. أعد استخدام هذه الشريحة لكل مشارك.</aside>
+  <div class="center"><input placeholder="المشارك · اللجنة"></div>
+  <div class="timer" data-minutes="6"></div>
+  <aside class="notes"><p>اكتب رمز المشارك واضغط T لست دقائق العرض، ثم مرة أخرى لست دقائق الأسئلة. أعد استخدام هذه الشريحة لكل جولة.</p></aside>
+</section>
+
+<section class="slide dark" id="record-time" data-label="سجل القرار">
+  <div class="kicker">بعد كل عرض</div>
+  <h1>سجل القرار · 4 د</h1>
+  <div class="timer" data-minutes="4"></div>
+  <p class="lead">المحفز، وتقييم المخاطر، والمعايير، والقرار وشروطه، والرأي المخالف.</p>
+  <aside class="notes"><p>اضغط T. لا يناقش العارض العضوين أثناء الكتابة. ثم دقيقة للتبديل.</p></aside>
+</section>
+
+<section class="slide" id="followup" data-label="المتابعة" data-lo="LO1">
+  <div class="kicker">خلال خمسة أيام عمل</div>
+  <h2>مهمة المتابعة: قِس خطوة مراجعة كما قست نفسك</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>القائمة C</h4><p class="small mb0">أربعون توصية مخالفات في قائمة الانتظار نفسها، دون ذكاء اصطناعي. يرسل المقيِّم المفتاح بعد أن تسلّم السجل.</p></div>
+    <div class="card c-navy"><h4>أو قائمة حقيقية</h4><p class="small mb0">ثمانية أخطاء معروفة على الأقل في عمل يوم واحد، يزرعها من لا يراجع. لا يخرج من جهتك إلا الأرقام المجمعة.</p></div>
+  </div>
+  <div class="callout note mt"><b>والتسليم.</b> القسم 5 من وثيقة التصميم: الأرقام بفترة الثقة، والحكم بالقاعدة، والخطوة التالية بمالك وموعد. ثم مكالمة قصيرة مع المقيِّم.</div>
+  <aside class="notes"><p>خمس وعشرون دقيقة للقياس، وخمس للتسليم والمكالمة. السؤال في المكالمة: ماذا تغير في حكمك على خطوة المراجعة منذ اليوم الأول؟ ذكّر بأن عددًا صغيرًا من الأخطاء المزروعة لا يكفي لحكم «ضابط فعلي»، ومن يكتب ذلك ويقترح ما يلزم يأخذ الدرجة.</p></aside>
 </section>
 
 <section class="slide" id="review" data-label="مراجعة المدرّب">
   <div class="kicker">مراجعة المدرّب</div>
-  <h2>ما أظهرته العروض</h2>
+  <h2>ما أظهرته اللجان</h2>
   <div class="cols cols-3">
-    <div class="card c-teal"><h4>أقوى الأنماط</h4><p class="small mb0">ما أحسنته عدة مشاريع.</p></div>
-    <div class="card c-coral"><h4>الفجوات الشائعة</h4><p class="small mb0">ما ستصلحه معظم المشاريع تاليًا.</p></div>
-    <div class="card c-purple"><h4>مفاجأة واحدة</h4><p class="small mb0">ما لم يتوقعه أحد.</p></div>
+    <div class="card c-teal"><h4>أقوى الأنماط</h4><p class="small mb0">ما أحسنته عدة تصاميم.</p></div>
+    <div class="card c-coral"><h4>الفجوات الشائعة</h4><p class="small mb0">ما ستصلحه معظم التصاميم تاليًا.</p></div>
+    <div class="card c-purple"><h4>بطاقة واحدة</h4><p class="small mb0">البطاقة التي كشفت أكثر مما توقعنا.</p></div>
   </div>
-  <aside class="notes">املأها من ملاحظات التقييم في آخر استراحة. سمِّ المشاريع عند ذكر نقاط القوة، ولا تسمِّها عند ذكر الفجوات.</aside>
+  <aside class="notes"><p>املأها من أوراق التقدير في التسليم. سمِّ التصاميم عند ذكر نقاط القوة، ولا تسمِّها عند ذكر الفجوات. الفجوة الأكثر شيوعًا في الدفعات: خطة قياس بعدد مزروع لا يكفي للحكم دون أن يقول صاحبها ذلك.</p></aside>
 </section>
 
 <section class="slide" id="what-next" data-label="بعد المقرر">
   <div class="kicker">بعد المقرر</div>
   <h2>استمر</h2>
   <ul class="bullets">
-    <li><b>مشروعك يبقى لك:</b> أبقِه قابلًا للإعادة وأضف التحسين التالي الذي ذكرته اليوم</li>
-    <li><b>مقرر الأكاديمية التالي:</b> REPLACE: المقرر الذي يلي هذا المقرر</li>
+    <li><b>في جهتك:</b> ازرع أخطاء في خطوة مراجعة واحدة هذا الشهر، واحكم بفترة الثقة.</li>
+    <li><b>مقرر الأكاديمية التالي:</b> LDS-AIG-302 لضبط بوابات الموافقة في البرمجيات، وLDS-PRD-301 لضمانات المنتجات.</li>
+    <li><b>قبل كل دفعة:</b> تُراجع حالة القواعد الأجنبية وواجهات الموافقة على إجراءات الوكلاء، فهي تتغير.</li>
   </ul>
+  <aside class="notes"><p>المقرران LDS-AIG-302 وLDS-PRD-301 مذكوران في وصف المقرر في الكتالوج بوصفهما ما يتناول ما لا يتناوله هذا المقرر. ما يبقى ثابتًا: الإشراف يحتاج إلى الصلاحية والكفاءة والوقت، ويجب قياسه، وتتناسب الموافقة مع الأثر.</p></aside>
 </section>
 
 <section class="slide dark" id="thanks" data-label="شكرًا">

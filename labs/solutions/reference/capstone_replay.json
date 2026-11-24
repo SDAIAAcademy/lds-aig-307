@@ -1,0 +1,348 @@
+{
+ "today": {
+  "actions": 120,
+  "totals": {
+   "auto": 25,
+   "notify": 60,
+   "hold": 35,
+   "block": 0
+  },
+  "days": [
+   {
+    "date": "2027-03-07",
+    "actions": 17,
+    "auto": 4,
+    "notify": 8,
+    "hold": 5,
+    "block": 0
+   },
+   {
+    "date": "2027-03-08",
+    "actions": 12,
+    "auto": 3,
+    "notify": 6,
+    "hold": 3,
+    "block": 0
+   },
+   {
+    "date": "2027-03-09",
+    "actions": 12,
+    "auto": 1,
+    "notify": 8,
+    "hold": 3,
+    "block": 0
+   },
+   {
+    "date": "2027-03-10",
+    "actions": 11,
+    "auto": 2,
+    "notify": 5,
+    "hold": 4,
+    "block": 0
+   },
+   {
+    "date": "2027-03-11",
+    "actions": 10,
+    "auto": 2,
+    "notify": 4,
+    "hold": 4,
+    "block": 0
+   },
+   {
+    "date": "2027-03-14",
+    "actions": 17,
+    "auto": 2,
+    "notify": 9,
+    "hold": 6,
+    "block": 0
+   },
+   {
+    "date": "2027-03-15",
+    "actions": 12,
+    "auto": 3,
+    "notify": 7,
+    "hold": 2,
+    "block": 0
+   },
+   {
+    "date": "2027-03-16",
+    "actions": 12,
+    "auto": 3,
+    "notify": 6,
+    "hold": 3,
+    "block": 0
+   },
+   {
+    "date": "2027-03-17",
+    "actions": 11,
+    "auto": 3,
+    "notify": 6,
+    "hold": 2,
+    "block": 0
+   },
+   {
+    "date": "2027-03-18",
+    "actions": 6,
+    "auto": 2,
+    "notify": 1,
+    "hold": 3,
+    "block": 0
+   }
+  ],
+  "mean_holds_per_day": 3.5,
+  "max_holds_per_day": 6,
+  "days_over_capacity": 0,
+  "approval_minutes_per_day": 17.5,
+  "harmful_total": 9,
+  "harmful_stopped": [
+   "V-028",
+   "V-045",
+   "V-058",
+   "V-082",
+   "V-098",
+   "V-116"
+  ],
+  "harmful_notified": [
+   "V-031",
+   "V-063",
+   "V-095"
+  ],
+  "harmful_missed": [],
+  "sod_conflicts_rerouted": 5,
+  "holds_per_approver": {
+   "O-05": 18,
+   "O-06": 17
+  }
+ },
+ "card_A_reset": {
+  "actions": 120,
+  "totals": {
+   "auto": 25,
+   "notify": 73,
+   "hold": 22,
+   "block": 0
+  },
+  "days": [
+   {
+    "date": "2027-03-07",
+    "actions": 17,
+    "auto": 4,
+    "notify": 11,
+    "hold": 2,
+    "block": 0
+   },
+   {
+    "date": "2027-03-08",
+    "actions": 12,
+    "auto": 3,
+    "notify": 7,
+    "hold": 2,
+    "block": 0
+   },
+   {
+    "date": "2027-03-09",
+    "actions": 12,
+    "auto": 1,
+    "notify": 11,
+    "hold": 0,
+    "block": 0
+   },
+   {
+    "date": "2027-03-10",
+    "actions": 11,
+    "auto": 2,
+    "notify": 6,
+    "hold": 3,
+    "block": 0
+   },
+   {
+    "date": "2027-03-11",
+    "actions": 10,
+    "auto": 2,
+    "notify": 4,
+    "hold": 4,
+    "block": 0
+   },
+   {
+    "date": "2027-03-14",
+    "actions": 17,
+    "auto": 2,
+    "notify": 9,
+    "hold": 6,
+    "block": 0
+   },
+   {
+    "date": "2027-03-15",
+    "actions": 12,
+    "auto": 3,
+    "notify": 7,
+    "hold": 2,
+    "block": 0
+   },
+   {
+    "date": "2027-03-16",
+    "actions": 12,
+    "auto": 3,
+    "notify": 9,
+    "hold": 0,
+    "block": 0
+   },
+   {
+    "date": "2027-03-17",
+    "actions": 11,
+    "auto": 3,
+    "notify": 7,
+    "hold": 1,
+    "block": 0
+   },
+   {
+    "date": "2027-03-18",
+    "actions": 6,
+    "auto": 2,
+    "notify": 2,
+    "hold": 2,
+    "block": 0
+   }
+  ],
+  "mean_holds_per_day": 2.2,
+  "max_holds_per_day": 6,
+  "days_over_capacity": 0,
+  "approval_minutes_per_day": 11,
+  "harmful_total": 9,
+  "harmful_stopped": [
+   "V-045",
+   "V-058",
+   "V-082",
+   "V-116"
+  ],
+  "harmful_notified": [
+   "V-028",
+   "V-031",
+   "V-063",
+   "V-095",
+   "V-098"
+  ],
+  "harmful_missed": [],
+  "sod_conflicts_rerouted": 4,
+  "holds_per_approver": {
+   "O-05": 12,
+   "O-06": 10
+  }
+ },
+ "card_A_naive_all_fines_auto": {
+  "actions": 120,
+  "totals": {
+   "auto": 75,
+   "notify": 30,
+   "hold": 15,
+   "block": 0
+  },
+  "days": [
+   {
+    "date": "2027-03-07",
+    "actions": 17,
+    "auto": 13,
+    "notify": 2,
+    "hold": 2,
+    "block": 0
+   },
+   {
+    "date": "2027-03-08",
+    "actions": 12,
+    "auto": 5,
+    "notify": 5,
+    "hold": 2,
+    "block": 0
+   },
+   {
+    "date": "2027-03-09",
+    "actions": 12,
+    "auto": 7,
+    "notify": 5,
+    "hold": 0,
+    "block": 0
+   },
+   {
+    "date": "2027-03-10",
+    "actions": 11,
+    "auto": 6,
+    "notify": 2,
+    "hold": 3,
+    "block": 0
+   },
+   {
+    "date": "2027-03-11",
+    "actions": 10,
+    "auto": 8,
+    "notify": 1,
+    "hold": 1,
+    "block": 0
+   },
+   {
+    "date": "2027-03-14",
+    "actions": 17,
+    "auto": 9,
+    "notify": 6,
+    "hold": 2,
+    "block": 0
+   },
+   {
+    "date": "2027-03-15",
+    "actions": 12,
+    "auto": 6,
+    "notify": 4,
+    "hold": 2,
+    "block": 0
+   },
+   {
+    "date": "2027-03-16",
+    "actions": 12,
+    "auto": 9,
+    "notify": 3,
+    "hold": 0,
+    "block": 0
+   },
+   {
+    "date": "2027-03-17",
+    "actions": 11,
+    "auto": 8,
+    "notify": 2,
+    "hold": 1,
+    "block": 0
+   },
+   {
+    "date": "2027-03-18",
+    "actions": 6,
+    "auto": 4,
+    "notify": 0,
+    "hold": 2,
+    "block": 0
+   }
+  ],
+  "mean_holds_per_day": 1.5,
+  "max_holds_per_day": 3,
+  "days_over_capacity": 0,
+  "approval_minutes_per_day": 7.5,
+  "harmful_total": 9,
+  "harmful_stopped": [
+   "V-045",
+   "V-082",
+   "V-116"
+  ],
+  "harmful_notified": [
+   "V-063"
+  ],
+  "harmful_missed": [
+   "V-028",
+   "V-031",
+   "V-058",
+   "V-095",
+   "V-098"
+  ],
+  "sod_conflicts_rerouted": 1,
+  "holds_per_approver": {
+   "O-05": 8,
+   "O-06": 7
+  }
+ }
+}
