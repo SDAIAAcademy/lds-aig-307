@@ -1,0 +1,116 @@
+{
+ "_note": "العتبات المرجعية للمدرب. فصل المهام: لا يعتمد الإجراء موظف مسند إليه الملف.",
+ "capacity_per_day": 10,
+ "minutes_per_approval": 5,
+ "approvers": [
+  "O-05",
+  "O-06"
+ ],
+ "action_types": {
+  "send_reminder": {
+   "impact": 1,
+   "reversibility": "reversible"
+  },
+  "request_documents": {
+   "impact": 1,
+   "reversibility": "reversible"
+  },
+  "schedule_inspection": {
+   "impact": 1,
+   "reversibility": "reversible"
+  },
+  "update_address_record": {
+   "impact": 2,
+   "reversibility": "reversible"
+  },
+  "issue_permit": {
+   "impact": 2,
+   "reversibility": "reversible"
+  },
+  "close_inactive_file": {
+   "impact": 2,
+   "reversibility": "costly"
+  },
+  "share_with_inspection": {
+   "impact": 2,
+   "reversibility": "irreversible"
+  },
+  "refund_fee": {
+   "impact": 2,
+   "reversibility": "irreversible"
+  },
+  "send_refusal_notice": {
+   "impact": 3,
+   "reversibility": "costly"
+  },
+  "issue_violation_notice": {
+   "impact": 3,
+   "reversibility": "costly"
+  },
+  "suspend_permit": {
+   "impact": 3,
+   "reversibility": "irreversible"
+  },
+  "send_bulk_announcement": {
+   "impact": 2,
+   "reversibility": "irreversible"
+  }
+ },
+ "matrix": {
+  "1": {
+   "reversible": "auto",
+   "costly": "auto",
+   "irreversible": "notify"
+  },
+  "2": {
+   "reversible": "notify",
+   "costly": "notify",
+   "irreversible": "notify"
+  },
+  "3": {
+   "reversible": "notify",
+   "costly": "hold",
+   "irreversible": "hold"
+  },
+  "4": {
+   "reversible": "hold",
+   "costly": "hold",
+   "irreversible": "block"
+  }
+ },
+ "overrides": [
+  {
+   "action_type": "refund_fee",
+   "when": {
+    "amount_sar_over": 500
+   },
+   "mode": "hold"
+  },
+  {
+   "action_type": "refund_fee",
+   "when": {
+    "repeat_on_case": true
+   },
+   "mode": "block"
+  },
+  {
+   "action_type": "close_inactive_file",
+   "when": {
+    "assisted_channel": true
+   },
+   "mode": "hold"
+  },
+  {
+   "action_type": "send_bulk_announcement",
+   "when": {
+    "recipients_over": 50
+   },
+   "mode": "hold"
+  },
+  {
+   "action_type": "share_with_inspection",
+   "when": {},
+   "mode": "hold"
+  }
+ ]
+}

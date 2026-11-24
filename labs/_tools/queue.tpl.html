@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>قائمة انتظار المراجعة: مدينة الجثجاث</title>
+<style>
+:root{--ink:#1e2a36;--muted:#5b6773;--line:#cfd8dc;--bg:#fbfaf7;--card:#fff;--teal:#0f766e;--amber:#b45309;--red:#b91c1c}
+*{box-sizing:border-box}
+body{font-family:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif;margin:0;background:var(--bg);color:var(--ink);line-height:1.7}
+main{max-width:60rem;margin:0 auto;padding:1rem}
+.bar{font-size:.85rem;background:#eef2f4;border:1px solid #d5dde2;border-radius:.4rem;padding:.4rem .8rem}
+h1{font-size:1.3rem;margin:.8rem 0 .4rem}
+h2{font-size:1.05rem;margin:.6rem 0 .3rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:.5rem;padding:.7rem .9rem;margin:.6rem 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.6rem}
+dl{display:grid;grid-template-columns:minmax(7rem,auto) 1fr;gap:.15rem .8rem;margin:0}
+dt{color:var(--muted)}dd{margin:0;font-weight:600}
+button{font:inherit;padding:.45rem .9rem;border-radius:.4rem;border:1px solid var(--line);background:#fff;cursor:pointer;margin:.2rem 0 .2rem .4rem}
+button.primary{background:var(--teal);border-color:var(--teal);color:#fff}
+button.warn{border-color:var(--amber);color:var(--amber)}
+button:disabled{opacity:.45;cursor:not-allowed}
+.rec{border-inline-start:.3rem solid var(--teal)}
+.timer{font-size:1.4rem;font-weight:700;font-variant-numeric:tabular-nums}
+.timer.low{color:var(--red)}
+.head{position:sticky;top:0;z-index:2;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.5rem}
+.doc{border-top:1px dashed var(--line);padding-top:.3rem;margin-top:.3rem}
+.doc b{display:block}
+.note{font-size:.85rem;color:var(--muted)}
+.badge{display:inline-block;background:#fff7ed;border:1px solid var(--amber);color:var(--amber);border-radius:.3rem;padding:0 .4rem;font-size:.85rem}
+label{display:block;margin:.2rem 0}
+input[type=text],select{font:inherit;padding:.3rem .5rem;border:1px solid var(--line);border-radius:.3rem;max-width:100%}
+.hidden{display:none}
+.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+table{border-collapse:collapse;width:100%;font-size:.9rem}td,th{border:1px solid var(--line);padding:.3rem .4rem;text-align:start}
+.scroll{overflow-x:auto}
+</style>
+</head>
+<body>
+<main>
+<div class="bar">ملف تدريبي · أمانة مدينة الجثجاث جهة افتراضية، والطلبات اصطناعية · توصيات «مُرجِّح» هنا مكتوبة مسبقًا في ملف البيانات (محاكاة)، لا يولدها نموذج · المقرر <span class="ltr">LDS-AIG-307</span></div>
+<h1>قائمة انتظار المراجعة</h1>
+
+<section id="start" class="card">
+  <h2>قبل أن تبدأ</h2>
+  <p>تعمل وحدك ودون أي أداة ذكاء اصطناعي. لكل حالة 45 ثانية. إن انتهى الوقت قبل أن تقرر تبقى توصية «مُرجِّح» كما هي، كما يحدث في قائمة حقيقية مزدحمة.</p>
+  <label>رمز الجلسة الذي أعطاك إياه المدرب (لا تكتب اسمك): <input type="text" id="session" maxlength="20" placeholder="P-01"></label>
+  <label>المجموعة: <select id="set"></select></label>
+  <fieldset id="levers" class="card">
+    <legend>أدوات إعادة التصميم (للمجموعتين B وC فقط، اختر اثنتين على الأكثر)</legend>
+    <label><input type="checkbox" value="blind"> قرارك أولًا: تظهر التوصية بعد أن تسجل قرارك</label>
+    <label><input type="checkbox" value="checklist"> قائمة تحقق من ثلاثة بنود قبل القرار</label>
+    <label><input type="checkbox" value="confidence"> عرض ثقة النظام وتعليم ما دون 0.80</label>
+    <label><input type="checkbox" value="docs"> المستندات مفتوحة دائمًا</label>
+    <label><input type="checkbox" value="split"> دفعتان بينهما استراحة دقيقتين</label>
+  </fieldset>
+  <button class="primary" id="go">ابدأ</button>
+  <p class="note">لا يحفظ هذا الملف شيئًا خارج متصفحك. في النهاية تنزّل سجل الجلسة (CSV) وتسلّمه للمدرب.</p>
+</section>
+
+<section id="rules" class="card hidden">
+  <details><summary id="rulesTitle">القواعد</summary><ol id="rulesList"></ol></details>
+</section>
+
+<section id="work" class="hidden">
+  <div class="card head"><b id="progress"></b><span class="timer" id="timer">45</span></div>
+  <div class="card"><h2>ملخص الطلب كما استخرجه «مُرجِّح»</h2><dl id="summary"></dl>
+    <button id="toggleDocs">عرض المستندات الأصلية</button>
+    <div id="docs" class="hidden"></div>
+  </div>
+  <div id="checklistBox" class="card hidden">
+    <label><input type="checkbox" class="chk"> قرأت تاريخ الطلب وتواريخ الانتهاء</label>
+    <label><input type="checkbox" class="chk"> طابقت الملخص بالمستندات الإلزامية</label>
+    <label><input type="checkbox" class="chk"> حددت القاعدة التي تحكم القرار</label>
+  </div>
+  <div id="ownBox" class="card hidden"><h2>قرارك قبل رؤية التوصية</h2><div id="ownButtons"></div></div>
+  <div id="recBox" class="card rec"><h2>توصية «مُرجِّح»: <span id="recText"></span></h2><p id="recReason"></p><p id="recConf" class="hidden"></p>
+    <div id="actButtons"></div>
+  </div>
+</section>
+
+<section id="pause" class="card hidden"><h2>استراحة بين الدفعتين</h2><p class="timer" id="pauseTimer">120</p><button id="resume" disabled>تابع الدفعة الثانية</button></section>
+
+<section id="end" class="card hidden">
+  <h2>انتهت الجلسة</h2>
+  <div id="endSummary"></div>
+  <button class="primary" id="download">نزّل سجل الجلسة (CSV)</button>
+  <p class="note">لا تعرض هذه الصفحة ما اكتشفته من الأخطاء: لا تحمل مفتاح الإجابة. يعطيك المدرب ملف المفتاح بعد انتهاء الجميع، فتفتح <a href="score.html">score.html</a> وتحمّل السجل والمفتاح.</p>
+</section>
+</main>
+<script src="queue_lib.js"></script>
+<script>
+(function () {
+  'use strict';
+  var DATA = /*DATA*/null;
+  var SECONDS = 45;
+  var $ = function (id) { return document.getElementById(id); };
+  var state = null, tick = null;
+
+  var sel = $('set');
+  Object.keys(DATA).forEach(function (k) { var o = document.createElement('option'); o.value = k; o.textContent = DATA[k].label; sel.appendChild(o); });
+  function syncLevers() {
+    var on = sel.value !== 'A';
+    Array.prototype.forEach.call($('levers').querySelectorAll('input'), function (i) { i.disabled = !on; if (!on) i.checked = false; });
+  }
+  sel.addEventListener('change', syncLevers); syncLevers();
+  $('levers').addEventListener('change', function () {
+    var on = $('levers').querySelectorAll('input:checked');
+    if (on.length > 2) { on[on.length - 1].checked = false; }
+  });
+
+  function text(el, s) { el.textContent = s; return el; }
+  function make(tag, s, cls) { var e = document.createElement(tag); if (s !== undefined) e.textContent = s; if (cls) e.className = cls; return e; }
+
+  $('go').addEventListener('click', function () {
+    var code = $('session').value.trim().replace(/[^A-Za-z0-9-]/g, '');
+    if (!code) { alert('اكتب رمز الجلسة أولًا.'); return; }
+    var levers = Array.prototype.map.call($('levers').querySelectorAll('input:checked'), function (i) { return i.value; });
+    var set = DATA[sel.value];
+    state = { code: code, setKey: sel.value, set: set, levers: levers, i: 0, log: [] };
+    text($('rulesTitle'), set.rulesTitle);
+    var ol = $('rulesList'); ol.innerHTML = '';
+    set.rules.forEach(function (r) { ol.appendChild(make('li', r.id + ': ' + r.text)); });
+    $('start').classList.add('hidden'); $('rules').classList.remove('hidden'); $('work').classList.remove('hidden');
+    show();
+  });
+
+  function has(l) { return state.levers.indexOf(l) >= 0; }
+
+  function show() {
+    var s = state, c = s.set.cases[s.i];
+    s.cur = { started: Date.now(), opened: has('docs'), own: '', decided: false };
+    var pg = $('progress'); pg.innerHTML = ''; pg.appendChild(make('span', 'الحالة ' + (s.i + 1) + ' من ' + s.set.cases.length + ' · ')); pg.appendChild(make('span', c.id, 'ltr'));
+    var dl = $('summary'); dl.innerHTML = '';
+    c.summary.forEach(function (kv) { dl.appendChild(make('dt', kv[0])); dl.appendChild(make('dd', kv[1])); });
+    var docs = $('docs'); docs.innerHTML = '';
+    c.documents.forEach(function (d) {
+      var box = make('div', undefined, 'doc'); box.appendChild(make('b', d.title));
+      d.lines.forEach(function (l) { box.appendChild(make('div', l)); }); docs.appendChild(box);
+    });
+    docs.classList.toggle('hidden', !has('docs'));
+    $('toggleDocs').classList.toggle('hidden', has('docs'));
+    text($('toggleDocs'), 'عرض المستندات الأصلية');
+    $('checklistBox').classList.toggle('hidden', !has('checklist'));
+    Array.prototype.forEach.call(document.querySelectorAll('.chk'), function (x) { x.checked = false; });
+    text($('recText'), s.set.options[c.recommendation]);
+    text($('recReason'), 'السبب: ' + c.reason);
+    var conf = $('recConf');
+    conf.classList.toggle('hidden', !has('confidence'));
+    conf.innerHTML = '';
+    if (has('confidence')) {
+      conf.appendChild(make('span', 'ثقة النظام: ')); conf.appendChild(make('span', c.confidence.toFixed(2), 'ltr'));
+      if (c.confidence < 0.8) { conf.appendChild(make('span', ' ')); conf.appendChild(make('span', 'ثقة منخفضة: افتح المستندات', 'badge')); }
+    }
+    var blind = has('blind');
+    $('ownBox').classList.toggle('hidden', !blind);
+    $('recBox').classList.toggle('hidden', blind);
+    if (blind) {
+      var ob = $('ownButtons'); ob.innerHTML = '';
+      Object.keys(s.set.options).forEach(function (k) {
+        var b = make('button', s.set.options[k]); b.addEventListener('click', function () { if (!ready()) return; s.cur.own = k; $('ownBox').classList.add('hidden'); $('recBox').classList.remove('hidden'); actions(); }); ob.appendChild(b);
+      });
+    } else actions();
+    startTimer();
+  }
+
+  function ready() {
+    if (!has('checklist')) return true;
+    var all = Array.prototype.every.call(document.querySelectorAll('.chk'), function (x) { return x.checked; });
+    if (!all) alert('أكمل بنود قائمة التحقق الثلاثة أولًا.');
+    return all;
+  }
+
+  function actions() {
+    var s = state, c = s.set.cases[s.i], box = $('actButtons'); box.innerHTML = '';
+    var agree = make('button', 'اعتماد التوصية', 'primary'); agree.addEventListener('click', function () { if (ready()) record('agree', c.recommendation); }); box.appendChild(agree);
+    Object.keys(s.set.options).forEach(function (k) {
+      if (k === c.recommendation) return;
+      var b = make('button', 'تغيير القرار إلى: ' + s.set.options[k]); b.addEventListener('click', function () { if (ready()) record('override', k); }); box.appendChild(b);
+    });
+    var esc = make('button', 'تصعيد إلى رئيس المراجعة', 'warn'); esc.addEventListener('click', function () { if (ready()) record('escalate', ''); }); box.appendChild(esc);
+  }
+
+  $('toggleDocs').addEventListener('click', function () {
+    var d = $('docs'), hidden = d.classList.toggle('hidden');
+    if (!hidden) state.cur.opened = true;
+    text($('toggleDocs'), hidden ? 'عرض المستندات الأصلية' : 'إخفاء المستندات');
+  });
+
+  function startTimer() {
+    clearInterval(tick);
+    var t = $('timer');
+    function upd() {
+      var left = Math.max(0, SECONDS - Math.floor((Date.now() - state.cur.started) / 1000));
+      text(t, String(left)); t.classList.toggle('low', left <= 10);
+      if (left <= 0) record('timeout', state.set.cases[state.i].recommendation);
+    }
+    upd(); tick = setInterval(upd, 250);
+  }
+
+  function record(decision, final) {
+    var s = state; if (!s || s.cur.decided) return; s.cur.decided = true;
+    clearInterval(tick);
+    var c = s.set.cases[s.i];
+    var secs = Math.min(SECONDS, Math.round((Date.now() - s.cur.started) / 1000));
+    s.log.push({ session: s.code, set: s.setKey, levers: s.levers.join('+'), position: c.position, case_id: c.id, shown: c.recommendation,
+      own_first: s.cur.own, decision: decision, final: final, seconds: secs, opened_documents: s.cur.opened ? 'yes' : 'no',
+      checklist: has('checklist') ? 'yes' : '' });
+    try { localStorage.setItem('jathjath-queue-' + s.code + '-' + s.setKey, QueueLib.toCsv(s.log)); } catch (e) { /* storage may be blocked */ }
+    s.i++;
+    if (s.i >= s.set.cases.length) return finish();
+    if (has('split') && s.i === Math.floor(s.set.cases.length / 2)) return pause();
+    show();
+  }
+
+  function pause() {
+    $('work').classList.add('hidden'); $('pause').classList.remove('hidden');
+    var end = Date.now() + 120000;
+    var p = setInterval(function () {
+      var left = Math.max(0, Math.ceil((end - Date.now()) / 1000)); text($('pauseTimer'), String(left));
+      if (left <= 0) { clearInterval(p); $('resume').disabled = false; }
+    }, 250);
+  }
+  $('resume').addEventListener('click', function () { $('pause').classList.add('hidden'); $('work').classList.remove('hidden'); $('resume').disabled = true; show(); });
+
+  function finish() {
+    var s = state;
+    $('work').classList.add('hidden'); $('rules').classList.add('hidden'); $('end').classList.remove('hidden');
+    var n = s.log.length, cnt = function (d) { return s.log.filter(function (r) { return r.decision === d; }).length; };
+    var med = QueueLib.median(s.log.map(function (r) { return r.seconds; }));
+    var t = make('table'); var rows = [['الحالات', n], ['اعتماد التوصية', cnt('agree')], ['تغيير القرار', cnt('override')], ['تصعيد', cnt('escalate')], ['انتهاء الوقت', cnt('timeout')], ['فتحت المستندات في', s.log.filter(function (r) { return r.opened_documents === 'yes'; }).length], ['وسيط الثواني للحالة', med]];
+    rows.forEach(function (r) { var tr = make('tr'); tr.appendChild(make('th', r[0])); tr.appendChild(make('td', String(r[1]))); t.appendChild(tr); });
+    var w = make('div', undefined, 'scroll'); w.appendChild(t); $('endSummary').innerHTML = ''; $('endSummary').appendChild(w);
+  }
+
+  $('download').addEventListener('click', function () {
+    var blob = new Blob(['﻿' + QueueLib.toCsv(state.log)], { type: 'text/csv' });
+    var a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+    a.download = 'queue_log_' + state.code + '_' + state.setKey + '.csv'; document.body.appendChild(a); a.click(); a.remove();
+  });
+})();
+</script>
+</body>
+</html>

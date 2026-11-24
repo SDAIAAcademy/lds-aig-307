@@ -1,0 +1,1269 @@
+{
+ "_note": "Answer key of the three queues. Hand it out only after a run.",
+ "A": {
+  "A-01": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": ""
+  },
+  "A-02": {
+   "correct": "request",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "R5"
+  },
+  "A-03": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": ""
+  },
+  "A-04": {
+   "correct": "approve",
+   "seeded": true,
+   "type": "T3",
+   "visibility": "summary",
+   "direction": "against-applicant",
+   "half": "first",
+   "rule": ""
+  },
+  "A-05": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": ""
+  },
+  "A-06": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": ""
+  },
+  "A-07": {
+   "correct": "refuse",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "R4"
+  },
+  "A-08": {
+   "correct": "request",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "R2"
+  },
+  "A-09": {
+   "correct": "request",
+   "seeded": true,
+   "type": "T1",
+   "visibility": "documents",
+   "direction": "favours-applicant",
+   "half": "first",
+   "rule": "R2"
+  },
+  "A-10": {
+   "correct": "request",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "R3"
+  },
+  "A-11": {
+   "correct": "refuse",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "R6"
+  },
+  "A-12": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": ""
+  },
+  "A-13": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": ""
+  },
+  "A-14": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": ""
+  },
+  "A-15": {
+   "correct": "refuse",
+   "seeded": true,
+   "type": "T4",
+   "visibility": "summary",
+   "direction": "favours-applicant",
+   "half": "first",
+   "rule": "R4"
+  },
+  "A-16": {
+   "correct": "refuse",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "R4"
+  },
+  "A-17": {
+   "correct": "refuse",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "R4"
+  },
+  "A-18": {
+   "correct": "refuse",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "R4"
+  },
+  "A-19": {
+   "correct": "request",
+   "seeded": true,
+   "type": "T2",
+   "visibility": "documents",
+   "direction": "favours-applicant",
+   "half": "first",
+   "rule": "R3"
+  },
+  "A-20": {
+   "correct": "refuse",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "R4"
+  },
+  "A-21": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": ""
+  },
+  "A-22": {
+   "correct": "request",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "R2"
+  },
+  "A-23": {
+   "correct": "request",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "R3"
+  },
+  "A-24": {
+   "correct": "request",
+   "seeded": true,
+   "type": "T6",
+   "visibility": "summary",
+   "direction": "favours-applicant",
+   "half": "first",
+   "rule": "R5"
+  },
+  "A-25": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": ""
+  },
+  "A-26": {
+   "correct": "refuse",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "R6"
+  },
+  "A-27": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": ""
+  },
+  "A-28": {
+   "correct": "approve",
+   "seeded": true,
+   "type": "T5",
+   "visibility": "documents",
+   "direction": "against-applicant",
+   "half": "first",
+   "rule": ""
+  },
+  "A-29": {
+   "correct": "refuse",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "R6"
+  },
+  "A-30": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": ""
+  },
+  "A-31": {
+   "correct": "refuse",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "R4"
+  },
+  "A-32": {
+   "correct": "request",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "R5"
+  },
+  "A-33": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": ""
+  },
+  "A-34": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": ""
+  },
+  "A-35": {
+   "correct": "request",
+   "seeded": true,
+   "type": "T1",
+   "visibility": "documents",
+   "direction": "favours-applicant",
+   "half": "second",
+   "rule": "R2"
+  },
+  "A-36": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": ""
+  },
+  "A-37": {
+   "correct": "request",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "R5"
+  },
+  "A-38": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": ""
+  },
+  "A-39": {
+   "correct": "refuse",
+   "seeded": true,
+   "type": "T4",
+   "visibility": "summary",
+   "direction": "favours-applicant",
+   "half": "second",
+   "rule": "R4"
+  },
+  "A-40": {
+   "correct": "refuse",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "R1"
+  },
+  "A-41": {
+   "correct": "refuse",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "R6"
+  },
+  "A-42": {
+   "correct": "refuse",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "R6"
+  },
+  "A-43": {
+   "correct": "refuse",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "R1"
+  },
+  "A-44": {
+   "correct": "approve",
+   "seeded": true,
+   "type": "T5",
+   "visibility": "documents",
+   "direction": "against-applicant",
+   "half": "second",
+   "rule": ""
+  },
+  "A-45": {
+   "correct": "request",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "R3"
+  },
+  "A-46": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": ""
+  },
+  "A-47": {
+   "correct": "request",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "R5"
+  },
+  "A-48": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": ""
+  },
+  "A-49": {
+   "correct": "approve",
+   "seeded": true,
+   "type": "T3",
+   "visibility": "summary",
+   "direction": "against-applicant",
+   "half": "second",
+   "rule": ""
+  },
+  "A-50": {
+   "correct": "request",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "R3"
+  },
+  "A-51": {
+   "correct": "request",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "R2"
+  },
+  "A-52": {
+   "correct": "refuse",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "R6"
+  },
+  "A-53": {
+   "correct": "request",
+   "seeded": true,
+   "type": "T2",
+   "visibility": "documents",
+   "direction": "favours-applicant",
+   "half": "second",
+   "rule": "R3"
+  },
+  "A-54": {
+   "correct": "request",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "R3"
+  },
+  "A-55": {
+   "correct": "request",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "R3"
+  },
+  "A-56": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": ""
+  },
+  "A-57": {
+   "correct": "request",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "R5"
+  },
+  "A-58": {
+   "correct": "request",
+   "seeded": true,
+   "type": "T6",
+   "visibility": "summary",
+   "direction": "favours-applicant",
+   "half": "second",
+   "rule": "R5"
+  },
+  "A-59": {
+   "correct": "refuse",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "R1"
+  },
+  "A-60": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": ""
+  }
+ },
+ "B": {
+  "B-01": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": ""
+  },
+  "B-02": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": ""
+  },
+  "B-03": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": ""
+  },
+  "B-04": {
+   "correct": "request",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "R5"
+  },
+  "B-05": {
+   "correct": "request",
+   "seeded": true,
+   "type": "T2",
+   "visibility": "documents",
+   "direction": "favours-applicant",
+   "half": "first",
+   "rule": "R3"
+  },
+  "B-06": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": ""
+  },
+  "B-07": {
+   "correct": "refuse",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "R6"
+  },
+  "B-08": {
+   "correct": "refuse",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "R6"
+  },
+  "B-09": {
+   "correct": "approve",
+   "seeded": true,
+   "type": "T3",
+   "visibility": "summary",
+   "direction": "against-applicant",
+   "half": "first",
+   "rule": ""
+  },
+  "B-10": {
+   "correct": "request",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "R5"
+  },
+  "B-11": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": ""
+  },
+  "B-12": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": ""
+  },
+  "B-13": {
+   "correct": "refuse",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "R1"
+  },
+  "B-14": {
+   "correct": "approve",
+   "seeded": true,
+   "type": "T5",
+   "visibility": "documents",
+   "direction": "against-applicant",
+   "half": "first",
+   "rule": ""
+  },
+  "B-15": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": ""
+  },
+  "B-16": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": ""
+  },
+  "B-17": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": ""
+  },
+  "B-18": {
+   "correct": "refuse",
+   "seeded": true,
+   "type": "T4",
+   "visibility": "summary",
+   "direction": "favours-applicant",
+   "half": "first",
+   "rule": "R4"
+  },
+  "B-19": {
+   "correct": "request",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "R5"
+  },
+  "B-20": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": ""
+  },
+  "B-21": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": ""
+  },
+  "B-22": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": ""
+  },
+  "B-23": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": ""
+  },
+  "B-24": {
+   "correct": "request",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "R5"
+  },
+  "B-25": {
+   "correct": "request",
+   "seeded": true,
+   "type": "T6",
+   "visibility": "summary",
+   "direction": "favours-applicant",
+   "half": "second",
+   "rule": "R5"
+  },
+  "B-26": {
+   "correct": "request",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "R2"
+  },
+  "B-27": {
+   "correct": "refuse",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "R4"
+  },
+  "B-28": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": ""
+  },
+  "B-29": {
+   "correct": "request",
+   "seeded": true,
+   "type": "T1",
+   "visibility": "documents",
+   "direction": "favours-applicant",
+   "half": "second",
+   "rule": "R2"
+  },
+  "B-30": {
+   "correct": "refuse",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "R4"
+  },
+  "B-31": {
+   "correct": "request",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "R5"
+  },
+  "B-32": {
+   "correct": "refuse",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "R6"
+  },
+  "B-33": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": ""
+  },
+  "B-34": {
+   "correct": "approve",
+   "seeded": true,
+   "type": "T3",
+   "visibility": "summary",
+   "direction": "against-applicant",
+   "half": "second",
+   "rule": ""
+  },
+  "B-35": {
+   "correct": "refuse",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "R4"
+  },
+  "B-36": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": ""
+  },
+  "B-37": {
+   "correct": "request",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "R2"
+  },
+  "B-38": {
+   "correct": "request",
+   "seeded": true,
+   "type": "T2",
+   "visibility": "documents",
+   "direction": "favours-applicant",
+   "half": "second",
+   "rule": "R3"
+  },
+  "B-39": {
+   "correct": "request",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "R5"
+  },
+  "B-40": {
+   "correct": "approve",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": ""
+  }
+ },
+ "C": {
+  "C-01": {
+   "correct": "warning",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "V4"
+  },
+  "C-02": {
+   "correct": "warning",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "V4"
+  },
+  "C-03": {
+   "correct": "warning",
+   "seeded": true,
+   "type": "C1",
+   "visibility": "summary",
+   "direction": "against-applicant",
+   "half": "first",
+   "rule": "V4"
+  },
+  "C-04": {
+   "correct": "none",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "V2"
+  },
+  "C-05": {
+   "correct": "none",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "V1"
+  },
+  "C-06": {
+   "correct": "warning",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "V4"
+  },
+  "C-07": {
+   "correct": "fine",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "V3"
+  },
+  "C-08": {
+   "correct": "fine",
+   "seeded": true,
+   "type": "C2",
+   "visibility": "documents",
+   "direction": "favours-applicant",
+   "half": "first",
+   "rule": "V3"
+  },
+  "C-09": {
+   "correct": "fine",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "V3"
+  },
+  "C-10": {
+   "correct": "none",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "V1"
+  },
+  "C-11": {
+   "correct": "fine",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "V3"
+  },
+  "C-12": {
+   "correct": "warning",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "V4"
+  },
+  "C-13": {
+   "correct": "none",
+   "seeded": true,
+   "type": "C3",
+   "visibility": "documents",
+   "direction": "against-applicant",
+   "half": "first",
+   "rule": "V2"
+  },
+  "C-14": {
+   "correct": "none",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "V1"
+  },
+  "C-15": {
+   "correct": "fine",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "V3"
+  },
+  "C-16": {
+   "correct": "warning",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "V4"
+  },
+  "C-17": {
+   "correct": "none",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "V2"
+  },
+  "C-18": {
+   "correct": "none",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "V2"
+  },
+  "C-19": {
+   "correct": "fine",
+   "seeded": true,
+   "type": "C4",
+   "visibility": "summary",
+   "direction": "favours-applicant",
+   "half": "first",
+   "rule": "V3"
+  },
+  "C-20": {
+   "correct": "warning",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "first",
+   "rule": "V4"
+  },
+  "C-21": {
+   "correct": "none",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "V2"
+  },
+  "C-22": {
+   "correct": "warning",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "V4"
+  },
+  "C-23": {
+   "correct": "fine",
+   "seeded": true,
+   "type": "C2",
+   "visibility": "documents",
+   "direction": "favours-applicant",
+   "half": "second",
+   "rule": "V3"
+  },
+  "C-24": {
+   "correct": "none",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "V2"
+  },
+  "C-25": {
+   "correct": "fine",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "V3"
+  },
+  "C-26": {
+   "correct": "none",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "V1"
+  },
+  "C-27": {
+   "correct": "warning",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "V4"
+  },
+  "C-28": {
+   "correct": "warning",
+   "seeded": true,
+   "type": "C1",
+   "visibility": "summary",
+   "direction": "against-applicant",
+   "half": "second",
+   "rule": "V4"
+  },
+  "C-29": {
+   "correct": "none",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "V2"
+  },
+  "C-30": {
+   "correct": "none",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "V1"
+  },
+  "C-31": {
+   "correct": "warning",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "V4"
+  },
+  "C-32": {
+   "correct": "fine",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "V3"
+  },
+  "C-33": {
+   "correct": "fine",
+   "seeded": true,
+   "type": "C4",
+   "visibility": "summary",
+   "direction": "favours-applicant",
+   "half": "second",
+   "rule": "V3"
+  },
+  "C-34": {
+   "correct": "fine",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "V3"
+  },
+  "C-35": {
+   "correct": "fine",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "V3"
+  },
+  "C-36": {
+   "correct": "none",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "V1"
+  },
+  "C-37": {
+   "correct": "none",
+   "seeded": true,
+   "type": "C3",
+   "visibility": "documents",
+   "direction": "against-applicant",
+   "half": "second",
+   "rule": "V2"
+  },
+  "C-38": {
+   "correct": "fine",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "V3"
+  },
+  "C-39": {
+   "correct": "warning",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "V4"
+  },
+  "C-40": {
+   "correct": "warning",
+   "seeded": false,
+   "type": "",
+   "visibility": "",
+   "direction": "",
+   "half": "second",
+   "rule": "V4"
+  }
+ }
+}
