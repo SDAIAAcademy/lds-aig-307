@@ -1,0 +1,31 @@
+# تصميم الإشراف البشري ومراجعة الأخلاقيات
+
+> تقيس ما يلتقطه المراجع البشري من أخطاء مزروعة، وتضبط عتبات الموافقة على إجراءات الوكيل بالأثر وقابلية التراجع، وتصمم مسار التظلم، وتدير لجنة لمراجعة الأخلاقيات. مقرر من أكاديمية سدايا، الرمز LDS-AIG-307، الإصدار 2027.1.0، بالعربية.
+
+كل شريحة عنوان مثل "#### [day1#slide-id] العنوان": استشهد بالشرائح بهذا المعرّف، وكل استشهاد رابط (slides/day1.html#slide-id). هذه الملفات هي ما يراه المشارك: لا ملاحظات المدرّب فيها ولا مفاتيح الإجابة.
+
+## المقرر
+
+- [صفحة المقرر](https://sdaiaacademy.github.io/lds-aig-307/index.md): نظرة عامة ونواتج التعلم والجدول والمختبرات؛ الصفحة نفسها https://sdaiaacademy.github.io/lds-aig-307/index.html
+- [المقرر كاملًا](https://sdaiaacademy.github.io/lds-aig-307/llms-full.txt): كل وحدة وجلسة وشريحة في ملف واحد، نحو 10,556 من الوحدات النصية
+- [أسئلة التدريب](https://sdaiaacademy.github.io/lds-aig-307/practice.html): أسئلة تختبر بها نفسك، مع تعليل بعد كل إجابة
+
+## الشرائح
+
+- [اليوم 1: قياس المراجعة البشرية وضبط عتبات الوكيل](https://sdaiaacademy.github.io/lds-aig-307/slides/day1.md): تراجع ستين طلبًا تحت ضغط الوقت وتقيس ما التقطته، ثم تعيد تصميم خطوة المراجعة وتعيد القياس، ثم تعيد تشغيل مئتي إجراء لـ«مُتمِّم» على عتباتك؛ الجلسات: نماذج الإشراف والتحيز للأتمتة، الإشراف الشكلي وإعادة تصميم خطوة المراجعة، بوابات الموافقة وحق الإيقاف على الوكلاء؛ الصفحة: https://sdaiaacademy.github.io/lds-aig-307/slides/day1.html؛ نحو 5,358 من الوحدات النصية
+- [اليوم 2: قابلية الاعتراض ولجنة مراجعة الأخلاقيات](https://sdaiaacademy.github.io/lds-aig-307/slides/day2.md): بعد الاختبار القصير: من الإشعار إلى إعادة القرار وجبر الضرر، ثم إجراء لمراجعة الأخلاقيات تطبقه لجنة صورية على ملفين؛ الجلسات: قابلية الاعتراض ومراجعة الأخلاقيات؛ الصفحة: https://sdaiaacademy.github.io/lds-aig-307/slides/day2.html؛ نحو 2,727 من الوحدات النصية
+- [المشروع الختامي: مراجعة التصميم أمام اللجنة ومهمة المتابعة](https://sdaiaacademy.github.io/lds-aig-307/slides/capstone.md): تصميم للإشراف والمراجعة لمساعد محاضر المخالفات: عرض في ست دقائق، وست دقائق من اعتراضات اللجنة يرفع فيها المقيِّم الاستقلالية، ثم قياس قائمة انتظار خلال خمسة أيام عمل؛ الصفحة: https://sdaiaacademy.github.io/lds-aig-307/slides/capstone.html؛ نحو 1,835 من الوحدات النصية
+
+## المختبرات
+
+- [المختبر 1.1: مراجعة 60 حالة تحت ضغط الوقت](https://sdaiaacademy.github.io/lds-aig-307/labs/D1_1_queue.md): اليوم 1، الجلسة 1، 75 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-aig-307/labs/D1_1_queue.html
+- [المختبر 1.2: إعادة تصميم خطوة المراجعة وإعادة القياس](https://sdaiaacademy.github.io/lds-aig-307/labs/D1_2_redesign.md): اليوم 1، الجلسة 2، 75 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-aig-307/labs/D1_2_redesign.html
+- [المختبر 1.3: إعادة تشغيل إجراءات الوكيل على العتبات](https://sdaiaacademy.github.io/lds-aig-307/labs/D1_3_replay.md): اليوم 1، الجلسة 3، 75 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-aig-307/labs/D1_3_replay.html
+- [المختبر 2.1: جلسة للجنة مراجعة صورية](https://sdaiaacademy.github.io/lds-aig-307/labs/D2_1_board.md): اليوم 2، الجلسة 1، 75 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-aig-307/labs/D2_1_board.html
+
+## ملفات السياق
+
+- [context/course.md](https://sdaiaacademy.github.io/lds-aig-307/context/course.md): المقرر كاملًا، لمساعد يقبل ملفًا مرفقًا، نحو 10,556 من الوحدات النصية
+- [context/day1.md](https://sdaiaacademy.github.io/lds-aig-307/context/day1.md): اليوم 1، نحو 5,358 من الوحدات النصية
+- [context/day2.md](https://sdaiaacademy.github.io/lds-aig-307/context/day2.md): اليوم 2، نحو 2,727 من الوحدات النصية
+- [context/capstone.md](https://sdaiaacademy.github.io/lds-aig-307/context/capstone.md): المشروع الختامي، نحو 1,835 من الوحدات النصية

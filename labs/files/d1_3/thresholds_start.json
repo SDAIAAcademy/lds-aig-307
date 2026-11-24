@@ -1,0 +1,82 @@
+{
+ "_note": "نقطة البداية: كل إجراء تلقائي. غيّر التصنيف والمصفوفة والاستثناءات، ثم شغّل replay.py.",
+ "capacity_per_day": 10,
+ "minutes_per_approval": 5,
+ "approvers": [
+  "O-05",
+  "O-06"
+ ],
+ "action_types": {
+  "send_reminder": {
+   "impact": 1,
+   "reversibility": "reversible"
+  },
+  "request_documents": {
+   "impact": 1,
+   "reversibility": "reversible"
+  },
+  "schedule_inspection": {
+   "impact": 1,
+   "reversibility": "reversible"
+  },
+  "update_address_record": {
+   "impact": 1,
+   "reversibility": "reversible"
+  },
+  "issue_permit": {
+   "impact": 1,
+   "reversibility": "reversible"
+  },
+  "close_inactive_file": {
+   "impact": 1,
+   "reversibility": "reversible"
+  },
+  "share_with_inspection": {
+   "impact": 1,
+   "reversibility": "reversible"
+  },
+  "refund_fee": {
+   "impact": 1,
+   "reversibility": "reversible"
+  },
+  "send_refusal_notice": {
+   "impact": 1,
+   "reversibility": "reversible"
+  },
+  "issue_violation_notice": {
+   "impact": 1,
+   "reversibility": "reversible"
+  },
+  "suspend_permit": {
+   "impact": 1,
+   "reversibility": "reversible"
+  },
+  "send_bulk_announcement": {
+   "impact": 1,
+   "reversibility": "reversible"
+  }
+ },
+ "matrix": {
+  "1": {
+   "reversible": "auto",
+   "costly": "auto",
+   "irreversible": "auto"
+  },
+  "2": {
+   "reversible": "auto",
+   "costly": "auto",
+   "irreversible": "auto"
+  },
+  "3": {
+   "reversible": "auto",
+   "costly": "auto",
+   "irreversible": "auto"
+  },
+  "4": {
+   "reversible": "auto",
+   "costly": "auto",
+   "irreversible": "auto"
+  }
+ },
+ "overrides": []
+}

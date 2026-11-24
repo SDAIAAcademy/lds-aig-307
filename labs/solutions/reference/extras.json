@@ -1,0 +1,84 @@
+{
+ "checkpoint_day1_2": {
+  "before": [
+   16.8,
+   68.7
+  ],
+  "after": [
+   39.7,
+   89.2
+  ],
+  "overlap": true
+ },
+ "dossier_A": {
+  "audit": [
+   6,
+   200
+  ],
+  "rate_interval": [
+   1.4,
+   6.4
+  ],
+  "per_year": 12.3,
+  "per_year_range": [
+   6,
+   26
+  ]
+ },
+ "dossier_B": {
+  "base": [
+   396,
+   1800
+  ],
+  "rate_interval": [
+   20.1,
+   24
+  ]
+ },
+ "generated_by": "labs/_tools/extras.mjs",
+ "stretch_1_2_separation": {
+  "n": 116,
+  "at85": [
+   77.8,
+   90.6
+  ],
+  "at70": [
+   60.9,
+   77.4
+  ]
+ },
+ "stretch_1_3_headroom": {
+  "mean_holds_per_day": 7.7,
+  "capacity": 10,
+  "mean_headroom": 2.3,
+  "busiest_day_holds": 12
+ },
+ "slide_signage_7_of_10": [
+  39.7,
+  89.2,
+  "undetermined"
+ ],
+ "bank": {
+  "k9_n15": [
+   35.7,
+   80.2,
+   "undetermined"
+  ],
+  "k38_n40": [
+   83.5,
+   98.6,
+   "control"
+  ],
+  "k95_n100": [
+   88.8,
+   97.8,
+   "control"
+  ],
+  "k14_n30": [
+   30.2,
+   63.9,
+   "not-control"
+  ]
+ },
+ "check_seeded_needed_at_90": 61
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>المشروع الختامي: نظام إشعارات المخالفات</title><style>body{font-family:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif;max-width:52rem;margin:0 auto;padding:1rem;line-height:1.85;color:#1e2a36;background:#fbfaf7}
+.bar{font-size:.85rem;background:#eef2f4;border:1px solid #d5dde2;border-radius:.4rem;padding:.4rem .8rem}
+h1{font-size:1.4rem;line-height:1.5;margin:.8rem 0}h2{font-size:1.12rem;margin:1.4rem 0 .3rem}
+.card{border:1px solid #cfd8dc;border-radius:.4rem;padding:.6rem .9rem;margin:.8rem 0;background:#fff}
+.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.93rem}td,th{border:1px solid #cfd8dc;padding:.35rem .5rem;text-align:start;vertical-align:top;overflow-wrap:anywhere}td code,td .ltr{overflow-wrap:anywhere;word-break:break-all}th{background:#eef2f4}
+.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}</style></head>
+<body>
+<div class="bar">ملف تدريبي · المشروع الختامي · أمانة مدينة الجثجاث جهة افتراضية، والبيانات اصطناعية ومصنفة «عام» · المقرر <span class="ltr">LDS-AIG-307</span></div>
+<h1>النظام الذي تصمم إشرافه: مساعد إشعارات المخالفات</h1>
+<p>تطلب د. جهينة السبتي تصميمًا للإشراف والمراجعة لنظام ثالث في الخدمة، قبل أن يُوسَّع. تعرض التصميم على لجنة من زملائك، وتجلس أنت عضوًا في لجنة زميل.</p>
+
+<h2>ما يفعله النظام اليوم</h2>
+<div class="card">بعد كل زيارة معاينة يكتب المراقب تقريره. يقرأ <b>مساعد إشعارات المخالفات</b> التقرير وسجل التصريح، ويوصي بواحد من ثلاثة: لا مخالفة، أو إنذار، أو مخالفة بغرامة، مع سبب في سطر. يراجع التوصية موظف قبل أن تصدر. ثم ينفذ <b>وكيل الإشعارات</b> الإجراء: يرسل ملخص المعاينة، أو الإنذار، أو المخالفة، ويحجز المعاينة اللاحقة، ويلغي الغرامة إذا قُبل تظلم، وينشر قائمة الملتزمين في الحي، ويعلق التصريح بعد المخالفة الثالثة.</div>
+<p>الإشراف اليوم: يوقع مراقب على كل غرامة وكل تعليق قبل التنفيذ، ويعتمد مشرف كل إلغاء للغرامة وكل نشر لقائمة الملتزمين، وما عدا ذلك يُنفذ ويُخطر به المشرف في اليوم التالي. لم يُقس قط ما يلتقطه الموظف الذي يراجع التوصية.</p>
+
+<h2>قواعد المخالفات (قواعد الأمانة، كُتبت للمقرر)</h2>
+<p>تُطبق بهذا الترتيب، وأول قاعدة تنطبق تحسم:</p>
+<div class="scroll"><table>
+<tr><th>القاعدة</th><th>النص</th></tr>
+<tr><td>V1</td><td>ملاحظة لا تسندها صورة أو قراءة في تقرير المعاينة: لا مخالفة.</td></tr>
+<tr><td>V2</td><td>ملاحظة صُححت أثناء الزيارة وأثبتها المراقب في التقرير: لا مخالفة.</td></tr>
+<tr><td>V3</td><td>ملاحظة جسيمة (سلامة أو صحة عامة)، أو ملاحظة تكررت على التصريح نفسه خلال 6 أشهر: مخالفة بغرامة.</td></tr>
+<tr><td>V4</td><td>غير ذلك (ملاحظة بسيطة أولى): إنذار.</td></tr>
+</table></div>
+
+<h2>الملفات</h2>
+<ul>
+<li><a href="cases_C.csv">cases_C.csv</a>: المجموعة C، أربعون توصية في قائمة الانتظار نفسها (اختر C في <span class="ltr">queue.html</span>). لمهمة المتابعة.</li>
+<li><a href="capstone_actions.csv">capstone_actions.csv</a>: 120 إجراءً سابقًا لوكيل الإشعارات في عشرة أيام عمل، بالأعمدة نفسها التي في المختبر 1.3.</li>
+<li><a href="thresholds_capstone_start.json">thresholds_capstone_start.json</a>: ملف البداية بأنواع الإجراءات السبعة، كلها تلقائية. يعمل عليه <span class="ltr">replay.py</span> من المختبر 1.3: <span class="ltr">uv run ../d1_3/replay.py thresholds_capstone_start.json --log capstone_actions.csv</span>.</li>
+<li><a href="design_template.md">design_template.md</a>: قالب وثيقة التصميم.</li>
+<li><a href="followup_task.html">followup_task.html</a>: مهمة المتابعة.</li>
+</ul>
+
+<h2>أنواع إجراءات وكيل الإشعارات</h2>
+<div class="scroll"><table>
+<tr><th>النوع في الملف</th><th>ما يفعله</th><th>في السجل</th></tr>
+<tr><td><span class="ltr">send_inspection_summary</span></td><td>إرسال ملخص المعاينة إلى صاحب التصريح، ونسخة إلى الجهة المعنية إن وُجدت ملاحظة جسيمة</td><td>30</td></tr>
+<tr><td><span class="ltr">issue_warning</span></td><td>إرسال إنذار</td><td>30</td></tr>
+<tr><td><span class="ltr">issue_fine</span></td><td>إرسال مخالفة بغرامة (<span class="ltr">amount_sar</span>)</td><td>20</td></tr>
+<tr><td><span class="ltr">schedule_reinspection</span></td><td>حجز معاينة لاحقة</td><td>25</td></tr>
+<tr><td><span class="ltr">waive_fine</span></td><td>إلغاء غرامة بعد تظلم مقبول</td><td>8</td></tr>
+<tr><td><span class="ltr">publish_compliance_list</span></td><td>نشر قائمة الملتزمين في الحي على صفحة الأمانة (<span class="ltr">recipients</span> عدد التصاريح في القائمة)</td><td>2</td></tr>
+<tr><td><span class="ltr">suspend_permit</span></td><td>تعليق تصريح بعد مخالفة ثالثة</td><td>5</td></tr>
+</table></div>
+
+<h2>ما تكتبه</h2>
+<p>وثيقة تصميم من خمسة أقسام بقالب <span class="ltr">design_template.md</span>: نموذج الإشراف وخطة القياس، والعتبات وناتج إعادة التشغيل، ومسار التظلم والإشعار بالعربية والإنجليزية، والإجراء مطبقًا على النظام، وخطة مهمة المتابعة. الذكاء الاصطناعي كامل في الصياغة، بشرط أن يبقى ما تدخله فيه من هذه الملفات وحدها، وأن تحفظ سجل جلسات المساعد. في المراجعة يرفع المقيِّم استقلالية النظام ببطاقة، فتعيد ضبط العتبات أمام اللجنة.</p>
+</body>
+</html>

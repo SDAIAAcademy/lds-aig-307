@@ -1,0 +1,1049 @@
+{
+ "generated_by": "labs/_tools/build.mjs",
+ "queue_profiles": {
+  "A": {
+   "cases": 60,
+   "seeded": 12,
+   "seeded_share": 0.2,
+   "documents_only_share": 0.5,
+   "first_half_share": 0.5,
+   "against_applicant_share": 0.333,
+   "types": {
+    "T1": 2,
+    "T2": 2,
+    "T3": 2,
+    "T4": 2,
+    "T5": 2,
+    "T6": 2
+   },
+   "correct_decisions": {
+    "approve": 23,
+    "request": 20,
+    "refuse": 17
+   }
+  },
+  "B": {
+   "cases": 40,
+   "seeded": 8,
+   "seeded_share": 0.2,
+   "documents_only_share": 0.5,
+   "first_half_share": 0.5,
+   "against_applicant_share": 0.375,
+   "types": {
+    "T1": 1,
+    "T2": 2,
+    "T3": 2,
+    "T4": 1,
+    "T5": 1,
+    "T6": 1
+   },
+   "correct_decisions": {
+    "approve": 20,
+    "request": 12,
+    "refuse": 8
+   }
+  },
+  "C": {
+   "cases": 40,
+   "seeded": 8,
+   "seeded_share": 0.2,
+   "documents_only_share": 0.5,
+   "first_half_share": 0.5,
+   "against_applicant_share": 0.5,
+   "types": {
+    "C1": 2,
+    "C2": 2,
+    "C3": 2,
+    "C4": 2
+   },
+   "correct_decisions": {
+    "none": 14,
+    "warning": 13,
+    "fine": 13
+   }
+  }
+ },
+ "baseline_R07": {
+  "seeded": 12,
+  "caught": 5,
+  "detection": 0.417,
+  "interval": [
+   0.193,
+   0.68
+  ],
+  "verdict": "not-control",
+  "false_overrides": 2,
+  "correct_recs": 48,
+  "false_override_rate": 0.042,
+  "escalations": 1,
+  "timeouts": 3,
+  "opened": 10,
+  "median_seconds": 22.5,
+  "by": {
+   "visibility": {
+    "summary": {
+     "n": 6,
+     "k": 4
+    },
+    "documents": {
+     "n": 6,
+     "k": 1
+    }
+   },
+   "half": {
+    "first": {
+     "n": 6,
+     "k": 3
+    },
+    "second": {
+     "n": 6,
+     "k": 2
+    }
+   },
+   "direction": {
+    "against-applicant": {
+     "n": 4,
+     "k": 1
+    },
+    "favours-applicant": {
+     "n": 8,
+     "k": 4
+    }
+   },
+   "opened": {
+    "not-opened": {
+     "n": 11,
+     "k": 4
+    },
+    "opened": {
+     "n": 1,
+     "k": 1
+    }
+   }
+  }
+ },
+ "intervals_n12": [
+  {
+   "k": 0,
+   "rate": 0,
+   "interval": [
+    0,
+    24.3
+   ],
+   "verdict": "not-control"
+  },
+  {
+   "k": 1,
+   "rate": 8.3,
+   "interval": [
+    1.5,
+    35.4
+   ],
+   "verdict": "not-control"
+  },
+  {
+   "k": 2,
+   "rate": 16.7,
+   "interval": [
+    4.7,
+    44.8
+   ],
+   "verdict": "not-control"
+  },
+  {
+   "k": 3,
+   "rate": 25,
+   "interval": [
+    8.9,
+    53.2
+   ],
+   "verdict": "not-control"
+  },
+  {
+   "k": 4,
+   "rate": 33.3,
+   "interval": [
+    13.8,
+    60.9
+   ],
+   "verdict": "not-control"
+  },
+  {
+   "k": 5,
+   "rate": 41.7,
+   "interval": [
+    19.3,
+    68
+   ],
+   "verdict": "not-control"
+  },
+  {
+   "k": 6,
+   "rate": 50,
+   "interval": [
+    25.4,
+    74.6
+   ],
+   "verdict": "not-control"
+  },
+  {
+   "k": 7,
+   "rate": 58.3,
+   "interval": [
+    32,
+    80.7
+   ],
+   "verdict": "undetermined"
+  },
+  {
+   "k": 8,
+   "rate": 66.7,
+   "interval": [
+    39.1,
+    86.2
+   ],
+   "verdict": "undetermined"
+  },
+  {
+   "k": 9,
+   "rate": 75,
+   "interval": [
+    46.8,
+    91.1
+   ],
+   "verdict": "undetermined"
+  },
+  {
+   "k": 10,
+   "rate": 83.3,
+   "interval": [
+    55.2,
+    95.3
+   ],
+   "verdict": "undetermined"
+  },
+  {
+   "k": 11,
+   "rate": 91.7,
+   "interval": [
+    64.6,
+    98.5
+   ],
+   "verdict": "undetermined"
+  },
+  {
+   "k": 12,
+   "rate": 100,
+   "interval": [
+    75.7,
+    100
+   ],
+   "verdict": "undetermined"
+  }
+ ],
+ "intervals_n8": [
+  {
+   "k": 0,
+   "rate": 0,
+   "interval": [
+    0,
+    32.4
+   ],
+   "verdict": "not-control"
+  },
+  {
+   "k": 1,
+   "rate": 12.5,
+   "interval": [
+    2.2,
+    47.1
+   ],
+   "verdict": "not-control"
+  },
+  {
+   "k": 2,
+   "rate": 25,
+   "interval": [
+    7.1,
+    59.1
+   ],
+   "verdict": "not-control"
+  },
+  {
+   "k": 3,
+   "rate": 37.5,
+   "interval": [
+    13.7,
+    69.4
+   ],
+   "verdict": "not-control"
+  },
+  {
+   "k": 4,
+   "rate": 50,
+   "interval": [
+    21.5,
+    78.5
+   ],
+   "verdict": "not-control"
+  },
+  {
+   "k": 5,
+   "rate": 62.5,
+   "interval": [
+    30.6,
+    86.3
+   ],
+   "verdict": "undetermined"
+  },
+  {
+   "k": 6,
+   "rate": 75,
+   "interval": [
+    40.9,
+    92.9
+   ],
+   "verdict": "undetermined"
+  },
+  {
+   "k": 7,
+   "rate": 87.5,
+   "interval": [
+    52.9,
+    97.8
+   ],
+   "verdict": "undetermined"
+  },
+  {
+   "k": 8,
+   "rate": 100,
+   "interval": [
+    67.6,
+    100
+   ],
+   "verdict": "undetermined"
+  }
+ ],
+ "seeded_needed_at_90": 61,
+ "parallel_example": {
+  "seeded": 10,
+  "caught": 7,
+  "interval": [
+   39.7,
+   89.2
+  ],
+  "verdict": "undetermined"
+ },
+ "pooled_example": {
+  "reviewers": 12,
+  "seeded": 144,
+  "caught": 108,
+  "interval": [
+   67.3,
+   81.4
+  ],
+  "verdict": "undetermined"
+ },
+ "p_true70_shows_10_of_12": 0.253,
+ "review_log": {
+  "weekly_escalation_rate": {
+   "1": 0.026,
+   "2": 0.027,
+   "3": 0.024,
+   "4": 0.027,
+   "5": 0.021,
+   "6": 0.058,
+   "7": 0.045,
+   "8": 0.047
+  },
+  "weekly_override_rate": {
+   "1": 0.088,
+   "2": 0.095,
+   "3": 0.098,
+   "4": 0.1,
+   "5": 0.083,
+   "6": 0.084,
+   "7": 0.082,
+   "8": 0.078
+  },
+  "R04": [
+   {
+    "week": 1,
+    "override_rate": 0.059,
+    "median_seconds": 40
+   },
+   {
+    "week": 2,
+    "override_rate": 0.069,
+    "median_seconds": 39
+   },
+   {
+    "week": 3,
+    "override_rate": 0.066,
+    "median_seconds": 35
+   },
+   {
+    "week": 4,
+    "override_rate": 0.09,
+    "median_seconds": 28
+   },
+   {
+    "week": 5,
+    "override_rate": 0.006,
+    "median_seconds": 8
+   },
+   {
+    "week": 6,
+    "override_rate": 0.007,
+    "median_seconds": 8
+   },
+   {
+    "week": 7,
+    "override_rate": 0.007,
+    "median_seconds": 7
+   },
+   {
+    "week": 8,
+    "override_rate": 0,
+    "median_seconds": 6
+   }
+  ],
+  "R02_override_rate": 0.188,
+  "others_override_rate_weeks_1_4": 0.075
+ },
+ "actions": {
+  "total": 200,
+  "by_type": {
+   "send_reminder": 20,
+   "request_documents": 20,
+   "schedule_inspection": 15,
+   "update_address_record": 7,
+   "issue_permit": 40,
+   "close_inactive_file": 20,
+   "share_with_inspection": 25,
+   "refund_fee": 15,
+   "send_refusal_notice": 20,
+   "issue_violation_notice": 10,
+   "suspend_permit": 6,
+   "send_bulk_announcement": 2
+  },
+  "per_day": {
+   "2027-03-07": 28,
+   "2027-03-08": 20,
+   "2027-03-09": 20,
+   "2027-03-10": 18,
+   "2027-03-11": 16,
+   "2027-03-14": 28,
+   "2027-03-15": 20,
+   "2027-03-16": 20,
+   "2027-03-17": 18,
+   "2027-03-18": 12
+  },
+  "harmful": [
+   {
+    "id": "M-015",
+    "type": "suspend_permit",
+    "outcome": "complaint_upheld",
+    "amount_sar": "",
+    "assisted_channel": "no"
+   },
+   {
+    "id": "M-036",
+    "type": "send_refusal_notice",
+    "outcome": "reversed_on_appeal",
+    "amount_sar": "",
+    "assisted_channel": "yes"
+   },
+   {
+    "id": "M-037",
+    "type": "issue_violation_notice",
+    "outcome": "reversed_on_appeal",
+    "amount_sar": "",
+    "assisted_channel": "no"
+   },
+   {
+    "id": "M-046",
+    "type": "close_inactive_file",
+    "outcome": "wrongly_closed",
+    "amount_sar": "",
+    "assisted_channel": "yes"
+   },
+   {
+    "id": "M-067",
+    "type": "send_bulk_announcement",
+    "outcome": "wrong_content",
+    "amount_sar": "",
+    "assisted_channel": "no"
+   },
+   {
+    "id": "M-081",
+    "type": "send_refusal_notice",
+    "outcome": "reversed_on_appeal",
+    "amount_sar": "",
+    "assisted_channel": "no"
+   },
+   {
+    "id": "M-102",
+    "type": "issue_permit",
+    "outcome": "reversed_on_review",
+    "amount_sar": "",
+    "assisted_channel": "no"
+   },
+   {
+    "id": "M-107",
+    "type": "send_refusal_notice",
+    "outcome": "reversed_on_appeal",
+    "amount_sar": "",
+    "assisted_channel": "yes"
+   },
+   {
+    "id": "M-121",
+    "type": "refund_fee",
+    "outcome": "duplicate_refund",
+    "amount_sar": 250,
+    "assisted_channel": "yes"
+   },
+   {
+    "id": "M-123",
+    "type": "share_with_inspection",
+    "outcome": "over_shared",
+    "amount_sar": "",
+    "assisted_channel": "no"
+   },
+   {
+    "id": "M-130",
+    "type": "suspend_permit",
+    "outcome": "complaint_upheld",
+    "amount_sar": "",
+    "assisted_channel": "no"
+   },
+   {
+    "id": "M-136",
+    "type": "refund_fee",
+    "outcome": "paid_to_wrong_case",
+    "amount_sar": 1100,
+    "assisted_channel": "no"
+   },
+   {
+    "id": "M-144",
+    "type": "suspend_permit",
+    "outcome": "complaint_upheld",
+    "amount_sar": "",
+    "assisted_channel": "no"
+   },
+   {
+    "id": "M-152",
+    "type": "issue_violation_notice",
+    "outcome": "reversed_on_appeal",
+    "amount_sar": "",
+    "assisted_channel": "no"
+   },
+   {
+    "id": "M-159",
+    "type": "send_refusal_notice",
+    "outcome": "reversed_on_appeal",
+    "amount_sar": "",
+    "assisted_channel": "no"
+   },
+   {
+    "id": "M-164",
+    "type": "close_inactive_file",
+    "outcome": "wrongly_closed",
+    "amount_sar": "",
+    "assisted_channel": "yes"
+   }
+  ]
+ },
+ "replay": {
+  "reference": {
+   "actions": 200,
+   "totals": {
+    "auto": 55,
+    "notify": 67,
+    "hold": 77,
+    "block": 1
+   },
+   "days": [
+    {
+     "date": "2027-03-07",
+     "actions": 28,
+     "auto": 8,
+     "notify": 12,
+     "hold": 8,
+     "block": 0
+    },
+    {
+     "date": "2027-03-08",
+     "actions": 20,
+     "auto": 5,
+     "notify": 6,
+     "hold": 9,
+     "block": 0
+    },
+    {
+     "date": "2027-03-09",
+     "actions": 20,
+     "auto": 6,
+     "notify": 7,
+     "hold": 7,
+     "block": 0
+    },
+    {
+     "date": "2027-03-10",
+     "actions": 18,
+     "auto": 3,
+     "notify": 7,
+     "hold": 8,
+     "block": 0
+    },
+    {
+     "date": "2027-03-11",
+     "actions": 16,
+     "auto": 3,
+     "notify": 6,
+     "hold": 7,
+     "block": 0
+    },
+    {
+     "date": "2027-03-14",
+     "actions": 28,
+     "auto": 10,
+     "notify": 5,
+     "hold": 12,
+     "block": 1
+    },
+    {
+     "date": "2027-03-15",
+     "actions": 20,
+     "auto": 9,
+     "notify": 2,
+     "hold": 9,
+     "block": 0
+    },
+    {
+     "date": "2027-03-16",
+     "actions": 20,
+     "auto": 3,
+     "notify": 10,
+     "hold": 7,
+     "block": 0
+    },
+    {
+     "date": "2027-03-17",
+     "actions": 18,
+     "auto": 6,
+     "notify": 5,
+     "hold": 7,
+     "block": 0
+    },
+    {
+     "date": "2027-03-18",
+     "actions": 12,
+     "auto": 2,
+     "notify": 7,
+     "hold": 3,
+     "block": 0
+    }
+   ],
+   "mean_holds_per_day": 7.7,
+   "max_holds_per_day": 12,
+   "days_over_capacity": 1,
+   "approval_minutes_per_day": 38.5,
+   "harmful_total": 16,
+   "harmful_stopped": [
+    "M-015",
+    "M-036",
+    "M-037",
+    "M-046",
+    "M-067",
+    "M-081",
+    "M-107",
+    "M-121",
+    "M-123",
+    "M-130",
+    "M-136",
+    "M-144",
+    "M-152",
+    "M-159",
+    "M-164"
+   ],
+   "harmful_notified": [
+    "M-102"
+   ],
+   "harmful_missed": [],
+   "sod_conflicts_rerouted": 24,
+   "holds_per_approver": {
+    "O-05": 39,
+    "O-06": 38
+   }
+  },
+  "hold_everything_impact2_plus": {
+   "actions": 200,
+   "totals": {
+    "auto": 55,
+    "notify": 0,
+    "hold": 145,
+    "block": 0
+   },
+   "days": [
+    {
+     "date": "2027-03-07",
+     "actions": 28,
+     "auto": 8,
+     "notify": 0,
+     "hold": 20,
+     "block": 0
+    },
+    {
+     "date": "2027-03-08",
+     "actions": 20,
+     "auto": 5,
+     "notify": 0,
+     "hold": 15,
+     "block": 0
+    },
+    {
+     "date": "2027-03-09",
+     "actions": 20,
+     "auto": 6,
+     "notify": 0,
+     "hold": 14,
+     "block": 0
+    },
+    {
+     "date": "2027-03-10",
+     "actions": 18,
+     "auto": 3,
+     "notify": 0,
+     "hold": 15,
+     "block": 0
+    },
+    {
+     "date": "2027-03-11",
+     "actions": 16,
+     "auto": 3,
+     "notify": 0,
+     "hold": 13,
+     "block": 0
+    },
+    {
+     "date": "2027-03-14",
+     "actions": 28,
+     "auto": 10,
+     "notify": 0,
+     "hold": 18,
+     "block": 0
+    },
+    {
+     "date": "2027-03-15",
+     "actions": 20,
+     "auto": 9,
+     "notify": 0,
+     "hold": 11,
+     "block": 0
+    },
+    {
+     "date": "2027-03-16",
+     "actions": 20,
+     "auto": 3,
+     "notify": 0,
+     "hold": 17,
+     "block": 0
+    },
+    {
+     "date": "2027-03-17",
+     "actions": 18,
+     "auto": 6,
+     "notify": 0,
+     "hold": 12,
+     "block": 0
+    },
+    {
+     "date": "2027-03-18",
+     "actions": 12,
+     "auto": 2,
+     "notify": 0,
+     "hold": 10,
+     "block": 0
+    }
+   ],
+   "mean_holds_per_day": 14.5,
+   "max_holds_per_day": 20,
+   "days_over_capacity": 9,
+   "approval_minutes_per_day": 72.5,
+   "harmful_total": 16,
+   "harmful_stopped": [
+    "M-015",
+    "M-036",
+    "M-037",
+    "M-046",
+    "M-067",
+    "M-081",
+    "M-102",
+    "M-107",
+    "M-121",
+    "M-123",
+    "M-130",
+    "M-136",
+    "M-144",
+    "M-152",
+    "M-159",
+    "M-164"
+   ],
+   "harmful_notified": [],
+   "harmful_missed": [],
+   "sod_conflicts_rerouted": 44,
+   "holds_per_approver": {
+    "O-05": 73,
+    "O-06": 72
+   }
+  },
+  "hold_impact3_only": {
+   "actions": 200,
+   "totals": {
+    "auto": 164,
+    "notify": 0,
+    "hold": 36,
+    "block": 0
+   },
+   "days": [
+    {
+     "date": "2027-03-07",
+     "actions": 28,
+     "auto": 23,
+     "notify": 0,
+     "hold": 5,
+     "block": 0
+    },
+    {
+     "date": "2027-03-08",
+     "actions": 20,
+     "auto": 16,
+     "notify": 0,
+     "hold": 4,
+     "block": 0
+    },
+    {
+     "date": "2027-03-09",
+     "actions": 20,
+     "auto": 17,
+     "notify": 0,
+     "hold": 3,
+     "block": 0
+    },
+    {
+     "date": "2027-03-10",
+     "actions": 18,
+     "auto": 14,
+     "notify": 0,
+     "hold": 4,
+     "block": 0
+    },
+    {
+     "date": "2027-03-11",
+     "actions": 16,
+     "auto": 12,
+     "notify": 0,
+     "hold": 4,
+     "block": 0
+    },
+    {
+     "date": "2027-03-14",
+     "actions": 28,
+     "auto": 22,
+     "notify": 0,
+     "hold": 6,
+     "block": 0
+    },
+    {
+     "date": "2027-03-15",
+     "actions": 20,
+     "auto": 17,
+     "notify": 0,
+     "hold": 3,
+     "block": 0
+    },
+    {
+     "date": "2027-03-16",
+     "actions": 20,
+     "auto": 16,
+     "notify": 0,
+     "hold": 4,
+     "block": 0
+    },
+    {
+     "date": "2027-03-17",
+     "actions": 18,
+     "auto": 17,
+     "notify": 0,
+     "hold": 1,
+     "block": 0
+    },
+    {
+     "date": "2027-03-18",
+     "actions": 12,
+     "auto": 10,
+     "notify": 0,
+     "hold": 2,
+     "block": 0
+    }
+   ],
+   "mean_holds_per_day": 3.6,
+   "max_holds_per_day": 6,
+   "days_over_capacity": 0,
+   "approval_minutes_per_day": 18,
+   "harmful_total": 16,
+   "harmful_stopped": [
+    "M-015",
+    "M-036",
+    "M-037",
+    "M-081",
+    "M-107",
+    "M-130",
+    "M-144",
+    "M-152",
+    "M-159"
+   ],
+   "harmful_notified": [],
+   "harmful_missed": [
+    "M-046",
+    "M-067",
+    "M-102",
+    "M-121",
+    "M-123",
+    "M-136",
+    "M-164"
+   ],
+   "sod_conflicts_rerouted": 9,
+   "holds_per_approver": {
+    "O-05": 18,
+    "O-06": 18
+   }
+  },
+  "start_file": {
+   "actions": 200,
+   "totals": {
+    "auto": 200,
+    "notify": 0,
+    "hold": 0,
+    "block": 0
+   },
+   "days": [
+    {
+     "date": "2027-03-07",
+     "actions": 28,
+     "auto": 28,
+     "notify": 0,
+     "hold": 0,
+     "block": 0
+    },
+    {
+     "date": "2027-03-08",
+     "actions": 20,
+     "auto": 20,
+     "notify": 0,
+     "hold": 0,
+     "block": 0
+    },
+    {
+     "date": "2027-03-09",
+     "actions": 20,
+     "auto": 20,
+     "notify": 0,
+     "hold": 0,
+     "block": 0
+    },
+    {
+     "date": "2027-03-10",
+     "actions": 18,
+     "auto": 18,
+     "notify": 0,
+     "hold": 0,
+     "block": 0
+    },
+    {
+     "date": "2027-03-11",
+     "actions": 16,
+     "auto": 16,
+     "notify": 0,
+     "hold": 0,
+     "block": 0
+    },
+    {
+     "date": "2027-03-14",
+     "actions": 28,
+     "auto": 28,
+     "notify": 0,
+     "hold": 0,
+     "block": 0
+    },
+    {
+     "date": "2027-03-15",
+     "actions": 20,
+     "auto": 20,
+     "notify": 0,
+     "hold": 0,
+     "block": 0
+    },
+    {
+     "date": "2027-03-16",
+     "actions": 20,
+     "auto": 20,
+     "notify": 0,
+     "hold": 0,
+     "block": 0
+    },
+    {
+     "date": "2027-03-17",
+     "actions": 18,
+     "auto": 18,
+     "notify": 0,
+     "hold": 0,
+     "block": 0
+    },
+    {
+     "date": "2027-03-18",
+     "actions": 12,
+     "auto": 12,
+     "notify": 0,
+     "hold": 0,
+     "block": 0
+    }
+   ],
+   "mean_holds_per_day": 0,
+   "max_holds_per_day": 0,
+   "days_over_capacity": 0,
+   "approval_minutes_per_day": 0,
+   "harmful_total": 16,
+   "harmful_stopped": [],
+   "harmful_notified": [],
+   "harmful_missed": [
+    "M-015",
+    "M-036",
+    "M-037",
+    "M-046",
+    "M-067",
+    "M-081",
+    "M-102",
+    "M-107",
+    "M-121",
+    "M-123",
+    "M-130",
+    "M-136",
+    "M-144",
+    "M-152",
+    "M-159",
+    "M-164"
+   ],
+   "sod_conflicts_rerouted": 0,
+   "holds_per_approver": {
+    "O-05": 0,
+    "O-06": 0
+   }
+  }
+ },
+ "capstone_actions": {
+  "total": 120,
+  "harmful": 9
+ }
+}

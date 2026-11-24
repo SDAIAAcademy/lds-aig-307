@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>إجراءات «مُتمِّم» وملف العتبات</title><style>body{font-family:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif;max-width:52rem;margin:0 auto;padding:1rem;line-height:1.85;color:#1e2a36;background:#fbfaf7}
+.bar{font-size:.85rem;background:#eef2f4;border:1px solid #d5dde2;border-radius:.4rem;padding:.4rem .8rem}
+h1{font-size:1.4rem;line-height:1.5;margin:.8rem 0}h2{font-size:1.12rem;margin:1.4rem 0 .3rem}
+.card{border:1px solid #cfd8dc;border-radius:.4rem;padding:.6rem .9rem;margin:.8rem 0;background:#fff}
+.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.93rem}td,th{border:1px solid #cfd8dc;padding:.35rem .5rem;text-align:start;vertical-align:top;overflow-wrap:anywhere}td code,td .ltr{overflow-wrap:anywhere;word-break:break-all}th{background:#eef2f4}
+code,.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}</style></head>
+<body>
+<div class="bar">ملف تدريبي · المختبر 1.3 · أمانة مدينة الجثجاث جهة افتراضية، والسجل اصطناعي · المقرر <span class="ltr">LDS-AIG-307</span></div>
+<h1>إجراءات «مُتمِّم» وملف العتبات</h1>
+<p>السجل <a href="mutammim_actions.csv">mutammim_actions.csv</a> فيه 200 إجراء نفذها «مُتمِّم» في عشرة أيام عمل، كلها تلقائية. عمود <code>outcome</code> يقول ما عُرف عن كل إجراء بعد وقوعه: <code>ok</code>، أو ضرر ثبت بتظلم أو شكوى أو مراجعة.</p>
+
+<h2>الأنواع الاثنا عشر</h2>
+<div class="scroll"><table>
+<tr><th>النوع في الملف</th><th>ما يفعله</th><th>في السجل</th></tr>
+<tr><td><code>send_reminder</code></td><td>تذكير مقدم الطلب بمستند ناقص</td><td>20</td></tr>
+<tr><td><code>request_documents</code></td><td>طلب مستندات بعد توصية «طلب مستندات»</td><td>20</td></tr>
+<tr><td><code>schedule_inspection</code></td><td>حجز زيارة معاينة وإبلاغ مقدم الطلب بموعدها</td><td>15</td></tr>
+<tr><td><code>update_address_record</code></td><td>تعديل بيانات العنوان في سجل التصاريح</td><td>7</td></tr>
+<tr><td><code>issue_permit</code></td><td>إصدار التصريح بعد توصية الموافقة، ويُلغى بقرار إن ثبت خطؤه</td><td>40</td></tr>
+<tr><td><code>close_inactive_file</code></td><td>إغلاق ملف لم يكتمل خلال 30 يومًا؛ يعيد مقدم الطلب التقديم والدفع</td><td>20</td></tr>
+<tr><td><code>share_with_inspection</code></td><td>إحالة الملف كاملًا، بمستنداته، إلى فريق المعاينة</td><td>25</td></tr>
+<tr><td><code>refund_fee</code></td><td>رد الرسوم إلى الحساب المسجل في الملف (<code>amount_sar</code>)</td><td>15</td></tr>
+<tr><td><code>send_refusal_notice</code></td><td>إرسال إشعار الرفض بعد توصية الرفض</td><td>20</td></tr>
+<tr><td><code>issue_violation_notice</code></td><td>إرسال إشعار مخالفة بغرامة</td><td>10</td></tr>
+<tr><td><code>suspend_permit</code></td><td>تعليق تصريح ساري بعد بلاغ، فيتوقف النشاط حتى ينتهي التحقق</td><td>6</td></tr>
+<tr><td><code>send_bulk_announcement</code></td><td>رسالة واحدة إلى كل حاملي التصاريح (<code>recipients</code>)</td><td>2</td></tr>
+</table></div>
+<p>أعمدة أخرى: <code>assigned_officer</code> الموظف المسند إليه الملف، و<code>assisted_channel</code> «yes» إذا كان مقدم الطلب يتعامل عبر مركز الخدمة أو الهاتف لا الموقع.</p>
+
+<h2>ملف العتبات</h2>
+<p>ابدأ من <a href="thresholds_start.json">thresholds_start.json</a> واحفظ نسخة باسمك. فيه أربعة أجزاء:</p>
+<ul>
+<li><code>action_types</code>: لكل نوع أثره من 1 إلى 4 (منخفض، متوسط، مرتفع، كارثي) وقابلية التراجع: <code>reversible</code> (يُتراجع عنه دون كلفة تذكر)، أو <code>costly</code> (يُتراجع عنه بكلفة على الشخص)، أو <code>irreversible</code> (لا يُتراجع عنه).</li>
+<li><code>matrix</code>: لكل أثر ولكل قابلية تراجع وضع من أربعة: <code>auto</code> تلقائي، <code>notify</code> تلقائي مع إخطار يراه المشرف في اليوم التالي، <code>hold</code> يتوقف حتى يعتمده إنسان، <code>block</code> ممنوع على الوكيل.</li>
+<li><code>overrides</code>: استثناءات تجعل نوعًا أشد في حالات محددة: <code>amount_sar_over</code>، <code>recipients_over</code>، <code>assisted_channel</code>، <code>repeat_on_case</code> (إجراء من النوع نفسه سبق على الملف نفسه). الاستثناء لا يخفف أبدًا.</li>
+<li><code>capacity_per_day</code> و<code>minutes_per_approval</code> و<code>approvers</code>: طاقة المعتمدَين <span class="ltr">O-05</span> و<span class="ltr">O-06</span> معًا 10 اعتمادات في اليوم، بخمس دقائق للاعتماد. لا يعتمد أحدهما إجراءً على ملف مسند إليه.</li>
+</ul>
+<p>مقياس الأثر هنا مستويات الأثر الأربعة في الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي، كما تطبقها الأمانة على إجراء واحد. قابلية التراجع والأوضاع الأربعة قاعدة الأمانة، كُتبت للمقرر.</p>
+
+<h2>تشغيل البرنامج النصي</h2>
+<p>من مجلد <code>labs/files/d1_3</code>:</p>
+<pre class="ltr">uv run replay.py thresholds_start.json
+uv run replay.py my_thresholds.json --out held.csv</pre>
+<p>أو في JupyterLab أو خدمة دفاتر مستضافة: ارفع الملفات الثلاثة (<code>replay.py</code> والسجل وملف العتبات) إلى المجلد نفسه، ثم في خلية: <code>%run replay.py my_thresholds.json</code>. لا يحتاج البرنامج أي مكتبة ولا اتصالًا.</p>
+</body>
+</html>

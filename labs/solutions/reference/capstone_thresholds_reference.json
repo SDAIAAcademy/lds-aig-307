@@ -1,0 +1,176 @@
+{
+ "today": {
+  "_note": "Capstone reference for the assessor. Today: an inspector signs every fine and suspension.",
+  "capacity_per_day": 10,
+  "minutes_per_approval": 5,
+  "approvers": [
+   "O-05",
+   "O-06"
+  ],
+  "action_types": {
+   "send_inspection_summary": {
+    "impact": 1,
+    "reversibility": "irreversible"
+   },
+   "schedule_reinspection": {
+    "impact": 1,
+    "reversibility": "reversible"
+   },
+   "issue_warning": {
+    "impact": 2,
+    "reversibility": "costly"
+   },
+   "issue_fine": {
+    "impact": 3,
+    "reversibility": "costly"
+   },
+   "waive_fine": {
+    "impact": 2,
+    "reversibility": "irreversible"
+   },
+   "publish_compliance_list": {
+    "impact": 2,
+    "reversibility": "irreversible"
+   },
+   "suspend_permit": {
+    "impact": 3,
+    "reversibility": "irreversible"
+   }
+  },
+  "matrix": {
+   "1": {
+    "reversible": "auto",
+    "costly": "auto",
+    "irreversible": "notify"
+   },
+   "2": {
+    "reversible": "notify",
+    "costly": "notify",
+    "irreversible": "notify"
+   },
+   "3": {
+    "reversible": "notify",
+    "costly": "hold",
+    "irreversible": "hold"
+   },
+   "4": {
+    "reversible": "hold",
+    "costly": "hold",
+    "irreversible": "block"
+   }
+  },
+  "overrides": [
+   {
+    "action_type": "waive_fine",
+    "when": {
+     "repeat_on_case": true
+    },
+    "mode": "block"
+   },
+   {
+    "action_type": "waive_fine",
+    "when": {},
+    "mode": "hold"
+   },
+   {
+    "action_type": "publish_compliance_list",
+    "when": {},
+    "mode": "hold"
+   }
+  ]
+ },
+ "card_A_reset": {
+  "_note": "Capstone reference for the assessor. Today: an inspector signs every fine and suspension.",
+  "capacity_per_day": 10,
+  "minutes_per_approval": 5,
+  "approvers": [
+   "O-05",
+   "O-06"
+  ],
+  "action_types": {
+   "send_inspection_summary": {
+    "impact": 1,
+    "reversibility": "irreversible"
+   },
+   "schedule_reinspection": {
+    "impact": 1,
+    "reversibility": "reversible"
+   },
+   "issue_warning": {
+    "impact": 2,
+    "reversibility": "costly"
+   },
+   "issue_fine": {
+    "impact": 2,
+    "reversibility": "costly"
+   },
+   "waive_fine": {
+    "impact": 2,
+    "reversibility": "irreversible"
+   },
+   "publish_compliance_list": {
+    "impact": 2,
+    "reversibility": "irreversible"
+   },
+   "suspend_permit": {
+    "impact": 3,
+    "reversibility": "irreversible"
+   }
+  },
+  "matrix": {
+   "1": {
+    "reversible": "auto",
+    "costly": "auto",
+    "irreversible": "notify"
+   },
+   "2": {
+    "reversible": "notify",
+    "costly": "notify",
+    "irreversible": "notify"
+   },
+   "3": {
+    "reversible": "notify",
+    "costly": "hold",
+    "irreversible": "hold"
+   },
+   "4": {
+    "reversible": "hold",
+    "costly": "hold",
+    "irreversible": "block"
+   }
+  },
+  "overrides": [
+   {
+    "action_type": "waive_fine",
+    "when": {
+     "repeat_on_case": true
+    },
+    "mode": "block"
+   },
+   {
+    "action_type": "waive_fine",
+    "when": {},
+    "mode": "hold"
+   },
+   {
+    "action_type": "publish_compliance_list",
+    "when": {},
+    "mode": "hold"
+   },
+   {
+    "action_type": "issue_fine",
+    "when": {
+     "amount_sar_over": 500
+    },
+    "mode": "hold"
+   },
+   {
+    "action_type": "issue_fine",
+    "when": {
+     "repeat_on_case": true
+    },
+    "mode": "hold"
+   }
+  ]
+ }
+}

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>حساب معدلات الاكتشاف: مدينة الجثجاث</title>
+<style>
+:root{--ink:#1e2a36;--muted:#5b6773;--line:#cfd8dc;--bg:#fbfaf7}
+*{box-sizing:border-box}
+body{font-family:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif;margin:0;background:var(--bg);color:var(--ink);line-height:1.7}
+main{max-width:60rem;margin:0 auto;padding:1rem}
+.bar{font-size:.85rem;background:#eef2f4;border:1px solid #d5dde2;border-radius:.4rem;padding:.4rem .8rem}
+h1{font-size:1.3rem}h2{font-size:1.05rem;margin:1rem 0 .3rem}
+.card{background:#fff;border:1px solid var(--line);border-radius:.5rem;padding:.7rem .9rem;margin:.6rem 0}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.9rem}td,th{border:1px solid var(--line);padding:.3rem .4rem;text-align:start;vertical-align:top}th{background:#eef2f4}
+.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+.note{font-size:.85rem;color:var(--muted)}
+label{display:block;margin:.3rem 0}
+@media (max-width:640px){table.cards,table.cards tbody,table.cards tr,table.cards td{display:block;width:100%}table.cards tr:first-child{display:none}table.cards tr{border:1px solid var(--line);border-radius:.4rem;margin:.5rem 0;background:#fff}table.cards td{border:0;border-bottom:1px solid #eef2f4}table.cards td::before{content:attr(data-label) ": ";font-weight:600}}
+</style>
+</head>
+<body>
+<main>
+<div class="bar">ملف تدريبي · المقرر LDS-AIG-307 · تعمل الصفحة في متصفحك ولا ترسل شيئًا</div>
+<h1>حساب معدلات الاكتشاف من سجل الجلسة</h1>
+<div class="card">
+  <label>سجل جلسة أو أكثر (CSV من queue.html، أو baseline_log_R07.csv): <input type="file" id="logs" accept=".csv" multiple></label>
+  <label>ملف المفتاح الذي يعطيه المدرب بعد الجلسة (JSON): <input type="file" id="key" accept=".json"></label>
+  <p class="note">قاعدة الأمانة (قاعدة المقرر، لا نص وطني): المراجعة ضابط فعلي إذا كانت فترة الثقة 95% لمعدل الاكتشاف كلها عند 80% أو فوقها؛ وليست ضابطًا إذا كانت كلها تحته؛ وإلا فالعينة لا تكفي للحكم.</p>
+</div>
+<div id="out"></div>
+</main>
+<script src="queue_lib.js"></script>
+<script>
+(function () {
+  'use strict';
+  var logs = [], key = null;
+  var VERDICT = { 'control': 'ضابط فعلي', 'not-control': 'ليست ضابطًا فعليًا', 'undetermined': 'العينة لا تكفي للحكم' };
+  var GROUPS = { visibility: { summary: 'ظاهر في الملخص', documents: 'في المستندات وحدها' }, half: { first: 'النصف الأول', second: 'النصف الثاني' },
+    direction: { 'against-applicant': 'ضد مقدم الطلب', 'favours-applicant': 'لصالح مقدم الطلب' }, opened: { opened: 'فتح المستندات', 'not-opened': 'لم يفتحها' } };
+  var GNAME = { visibility: 'أين يظهر الخطأ', half: 'الموضع في القائمة', direction: 'اتجاه الخطأ', opened: 'المستندات' };
+  function readFiles(files, cb) {
+    var out = [], left = files.length; if (!left) cb(out);
+    Array.prototype.forEach.call(files, function (f) { var r = new FileReader(); r.onload = function () { out.push(String(r.result)); if (--left === 0) cb(out); }; r.readAsText(f); });
+  }
+  document.getElementById('logs').addEventListener('change', function (e) { readFiles(e.target.files, function (t) { logs = t; draw(); }); });
+  document.getElementById('key').addEventListener('change', function (e) { readFiles(e.target.files, function (t) { try { key = JSON.parse(t[0]); } catch (x) { key = null; alert('ملف المفتاح غير صالح.'); } draw(); }); });
+  var LEVER = { blind: 'قرارك أولًا', checklist: 'قائمة تحقق', confidence: 'ثقة النظام', docs: 'المستندات مفتوحة', split: 'دفعتان' };
+  function leverNames(s) { return s ? s.split('+').map(function (x) { return LEVER[x] || x; }).join('، ') : 'لا شيء'; }
+  function el(tag, txt) { var e = document.createElement(tag); if (txt !== undefined) e.textContent = txt; return e; }
+  function pct(x) { return (x * 100).toFixed(1) + '%'; }
+  function row(t, cells, head) { var tr = el('tr'); if (head) t._heads = cells; cells.forEach(function (c, i) { var cell = el(head ? 'th' : 'td', String(c)); if (!head && t._heads) cell.setAttribute('data-label', t._heads[i]); tr.appendChild(cell); }); t.appendChild(tr); }
+  function draw() {
+    var out = document.getElementById('out'); out.innerHTML = '';
+    if (!logs.length || !key) return;
+    var all = []; logs.forEach(function (t) { all = all.concat(QueueLib.parseCsv(t)); });
+    var sessions = QueueLib.groupSessions(all);
+    var t = el('table'); t.className = 'cards';
+    row(t, ['الجلسة', 'المجموعة', 'الأدوات', 'أخطاء مزروعة', 'اكتُشف', 'معدل الاكتشاف', 'فترة الثقة 95%', 'التجاوز الخاطئ', 'التصعيد', 'انتهاء الوقت', 'وسيط الثواني', 'الحكم'], true);
+    var pooled = {};
+    Object.keys(sessions).forEach(function (id) {
+      var rows = sessions[id], set = rows[0].set, k = key[set]; if (!k) return;
+      var s = QueueLib.score(rows, k);
+      row(t, [rows[0].session, set, leverNames(rows[0].levers), s.seeded, s.caught, pct(s.detection), pct(s.interval[0]) + ' إلى ' + pct(s.interval[1]),
+        s.falseOverrides + ' من ' + s.correctRecs, pct(s.escalationRate), s.timeouts, s.medianSeconds, VERDICT[s.verdict]]);
+      var p = pooled[set] = pooled[set] || { k: 0, n: 0, groups: {} };
+      p.k += s.caught; p.n += s.seeded;
+      Object.keys(s.by).forEach(function (g) { Object.keys(s.by[g]).forEach(function (v) { var c = (p.groups[g] = p.groups[g] || {})[v] = (p.groups[g] || {})[v] || { n: 0, k: 0 }; c.n += s.by[g][v].n; c.k += s.by[g][v].k; }); });
+    });
+    var w = el('div'); w.className = 'scroll'; w.appendChild(t);
+    out.appendChild(el('h2', 'كل جلسة')); out.appendChild(w);
+    Object.keys(pooled).forEach(function (set) {
+      var p = pooled[set], ci = QueueLib.wilson(p.k, p.n);
+      out.appendChild(el('h2', 'المجموعة ' + set + ': كل الجلسات معًا'));
+      out.appendChild(el('p', 'اكتُشف ' + p.k + ' من ' + p.n + ' (' + pct(p.n ? p.k / p.n : 0) + ')، وفترة الثقة 95% من ' + pct(ci[0]) + ' إلى ' + pct(ci[1]) + ': ' + VERDICT[QueueLib.verdict(ci[0], ci[1])] + '. أخطاء الجلسات ليست مستقلة تمامًا، فاقرأ الفترة المجمعة على أنها أضيق مما ينبغي.'));
+      var gt = el('table'); row(gt, ['التقسيم', 'الفئة', 'أخطاء', 'اكتُشف', 'المعدل'], true);
+      Object.keys(GROUPS).forEach(function (g) { Object.keys(GROUPS[g]).forEach(function (v) { var c = (p.groups[g] || {})[v]; if (c) row(gt, [GNAME[g], GROUPS[g][v], c.n, c.k, pct(c.n ? c.k / c.n : 0)]); }); });
+      var gw = el('div'); gw.className = 'scroll'; gw.appendChild(gt); out.appendChild(gw);
+    });
+  }
+})();
+</script>
+</body>
+</html>

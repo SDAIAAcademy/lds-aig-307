@@ -1,0 +1,504 @@
+{
+  "v": 1,
+  "engine": "1.0.0",
+  "build": {
+    "at": "2026-11-24T22:21:54Z",
+    "version": "2027.1.0",
+    "commit": "a09dc22"
+  },
+  "lang": "ar",
+  "dir": "rtl",
+  "totals": {
+    "decks": 3,
+    "slides": 63,
+    "words": 4080,
+    "notes": 62,
+    "notes_ratio": 0.98,
+    "activities": 5,
+    "styles": 5,
+    "slide_minutes": null,
+    "components": {
+      "cards": 51,
+      "pills": 0,
+      "callouts": 31,
+      "tables": 4,
+      "code": 0,
+      "tokens": 0,
+      "flows": 5,
+      "stats": 4,
+      "bars": 1,
+      "meters": 0,
+      "agendas": 2,
+      "quizzes": 5,
+      "checklists": 4,
+      "prompts": 0,
+      "chats": 0,
+      "tools": 0,
+      "traces": 0,
+      "ladders": 0,
+      "figures": 0,
+      "matrices": 0,
+      "timers": 4,
+      "columns": 32,
+      "images": 0,
+      "drawings": 0,
+      "fragments": 22
+    },
+    "minutes": 480
+  },
+  "decks": [
+    {
+      "deck": "day1",
+      "kind": "day",
+      "label": "اليوم 1",
+      "title": "قياس المراجعة البشرية وضبط عتبات الوكيل",
+      "slides": 32,
+      "words": 2274,
+      "notes": 32,
+      "notes_ratio": 1,
+      "activities": 3,
+      "styles": 0,
+      "slide_minutes": null,
+      "components": {
+        "cards": 28,
+        "pills": 0,
+        "callouts": 18,
+        "tables": 1,
+        "code": 0,
+        "tokens": 0,
+        "flows": 3,
+        "stats": 4,
+        "bars": 0,
+        "meters": 0,
+        "agendas": 1,
+        "quizzes": 3,
+        "checklists": 3,
+        "prompts": 0,
+        "chats": 0,
+        "tools": 0,
+        "traces": 0,
+        "ladders": 0,
+        "figures": 0,
+        "matrices": 0,
+        "timers": 0,
+        "columns": 19,
+        "images": 0,
+        "drawings": 0,
+        "fragments": 15
+      },
+      "minutes": 360,
+      "sessions": [
+        {
+          "n": 1,
+          "label": "الجلسة 1",
+          "title": "نماذج الإشراف والتحيز للأتمتة",
+          "slides": 9,
+          "words": 687,
+          "notes": 9,
+          "notes_ratio": 1,
+          "activities": 1,
+          "styles": 0,
+          "slide_minutes": null,
+          "components": {
+            "cards": 9,
+            "pills": 0,
+            "callouts": 6,
+            "tables": 0,
+            "code": 0,
+            "tokens": 0,
+            "flows": 1,
+            "stats": 2,
+            "bars": 0,
+            "meters": 0,
+            "agendas": 0,
+            "quizzes": 1,
+            "checklists": 1,
+            "prompts": 0,
+            "chats": 0,
+            "tools": 0,
+            "traces": 0,
+            "ladders": 0,
+            "figures": 0,
+            "matrices": 0,
+            "timers": 0,
+            "columns": 6,
+            "images": 0,
+            "drawings": 0,
+            "fragments": 5
+          },
+          "minutes": 120,
+          "lab_minutes": 75
+        },
+        {
+          "n": 2,
+          "label": "الجلسة 2",
+          "title": "الإشراف الشكلي وإعادة تصميم خطوة المراجعة",
+          "slides": 8,
+          "words": 574,
+          "notes": 8,
+          "notes_ratio": 1,
+          "activities": 1,
+          "styles": 0,
+          "slide_minutes": null,
+          "components": {
+            "cards": 2,
+            "pills": 0,
+            "callouts": 5,
+            "tables": 1,
+            "code": 0,
+            "tokens": 0,
+            "flows": 1,
+            "stats": 2,
+            "bars": 0,
+            "meters": 0,
+            "agendas": 0,
+            "quizzes": 1,
+            "checklists": 1,
+            "prompts": 0,
+            "chats": 0,
+            "tools": 0,
+            "traces": 0,
+            "ladders": 0,
+            "figures": 0,
+            "matrices": 0,
+            "timers": 0,
+            "columns": 4,
+            "images": 0,
+            "drawings": 0,
+            "fragments": 5
+          },
+          "minutes": 120,
+          "lab_minutes": 75
+        },
+        {
+          "n": 3,
+          "label": "الجلسة 3",
+          "title": "بوابات الموافقة وحق الإيقاف على الوكلاء",
+          "slides": 11,
+          "words": 728,
+          "notes": 11,
+          "notes_ratio": 1,
+          "activities": 1,
+          "styles": 0,
+          "slide_minutes": null,
+          "components": {
+            "cards": 13,
+            "pills": 0,
+            "callouts": 6,
+            "tables": 0,
+            "code": 0,
+            "tokens": 0,
+            "flows": 1,
+            "stats": 0,
+            "bars": 0,
+            "meters": 0,
+            "agendas": 0,
+            "quizzes": 1,
+            "checklists": 1,
+            "prompts": 0,
+            "chats": 0,
+            "tools": 0,
+            "traces": 0,
+            "ladders": 0,
+            "figures": 0,
+            "matrices": 0,
+            "timers": 0,
+            "columns": 7,
+            "images": 0,
+            "drawings": 0,
+            "fragments": 5
+          },
+          "minutes": 120,
+          "lab_minutes": 75
+        }
+      ]
+    },
+    {
+      "deck": "day2",
+      "kind": "day",
+      "label": "اليوم 2",
+      "title": "قابلية الاعتراض ولجنة مراجعة الأخلاقيات",
+      "slides": 17,
+      "words": 1135,
+      "notes": 17,
+      "notes_ratio": 1,
+      "activities": 2,
+      "styles": 0,
+      "slide_minutes": null,
+      "components": {
+        "cards": 14,
+        "pills": 0,
+        "callouts": 7,
+        "tables": 2,
+        "code": 0,
+        "tokens": 0,
+        "flows": 1,
+        "stats": 0,
+        "bars": 0,
+        "meters": 0,
+        "agendas": 1,
+        "quizzes": 2,
+        "checklists": 1,
+        "prompts": 0,
+        "chats": 0,
+        "tools": 0,
+        "traces": 0,
+        "ladders": 0,
+        "figures": 0,
+        "matrices": 0,
+        "timers": 1,
+        "columns": 8,
+        "images": 0,
+        "drawings": 0,
+        "fragments": 7
+      },
+      "minutes": 120,
+      "sessions": [
+        {
+          "n": 1,
+          "label": "الجلسة 1",
+          "title": "قابلية الاعتراض ومراجعة الأخلاقيات",
+          "slides": 14,
+          "words": 1036,
+          "notes": 14,
+          "notes_ratio": 1,
+          "activities": 2,
+          "styles": 0,
+          "slide_minutes": null,
+          "components": {
+            "cards": 14,
+            "pills": 0,
+            "callouts": 7,
+            "tables": 2,
+            "code": 0,
+            "tokens": 0,
+            "flows": 1,
+            "stats": 0,
+            "bars": 0,
+            "meters": 0,
+            "agendas": 0,
+            "quizzes": 2,
+            "checklists": 1,
+            "prompts": 0,
+            "chats": 0,
+            "tools": 0,
+            "traces": 0,
+            "ladders": 0,
+            "figures": 0,
+            "matrices": 0,
+            "timers": 0,
+            "columns": 8,
+            "images": 0,
+            "drawings": 0,
+            "fragments": 7
+          },
+          "minutes": 120,
+          "lab_minutes": 75
+        }
+      ]
+    },
+    {
+      "deck": "capstone",
+      "kind": "capstone",
+      "label": "المشروع الختامي",
+      "title": "مراجعة التصميم أمام اللجنة ومهمة المتابعة",
+      "slides": 14,
+      "words": 671,
+      "notes": 13,
+      "notes_ratio": 0.93,
+      "activities": 0,
+      "styles": 5,
+      "slide_minutes": null,
+      "components": {
+        "cards": 9,
+        "pills": 0,
+        "callouts": 6,
+        "tables": 1,
+        "code": 0,
+        "tokens": 0,
+        "flows": 1,
+        "stats": 0,
+        "bars": 1,
+        "meters": 0,
+        "agendas": 0,
+        "quizzes": 0,
+        "checklists": 0,
+        "prompts": 0,
+        "chats": 0,
+        "tools": 0,
+        "traces": 0,
+        "ladders": 0,
+        "figures": 0,
+        "matrices": 0,
+        "timers": 3,
+        "columns": 5,
+        "images": 0,
+        "drawings": 0,
+        "fragments": 0
+      },
+      "minutes": null,
+      "sessions": []
+    }
+  ],
+  "coverage": [
+    {
+      "id": "LO1",
+      "text": "يقيس فاعلية خطوة المراجعة البشرية باستخدام أخطاء مزروعة وزمن المراجعة، على قائمة انتظار من 60 حالة تُعالج بمساعدة الذكاء الاصطناعي",
+      "level": "Applied",
+      "slides": [
+        "day1#before-we-start",
+        "day1#recap-201",
+        "day1#three-models",
+        "day1#three-conditions",
+        "day1#automation-bias",
+        "day1#national-texts",
+        "day1#seeded-errors",
+        "day1#interval-rule",
+        "day1#checkpoint-1",
+        "day1#class-result",
+        "day1#formal-oversight",
+        "day1#levers",
+        "day1#fair-comparison",
+        "day1#alert-rules",
+        "day1#checkpoint-2",
+        "capstone#the-system",
+        "capstone#deliverables",
+        "capstone#followup"
+      ],
+      "activities": [
+        "day1#checkpoint-1-q1",
+        "day1#checkpoint-2-q1"
+      ],
+      "sessions": [
+        "day1/1",
+        "day1/2"
+      ],
+      "labs": [
+        "1.1",
+        "1.2"
+      ],
+      "questions": [
+        "q-lo1-1",
+        "q-lo1-2",
+        "q-lo1-3",
+        "q-lo1-4"
+      ],
+      "covered": true
+    },
+    {
+      "id": "LO2",
+      "text": "يهيئ عتبات الموافقة على إجراءات الوكيل بحسب الأثر وقابلية التراجع، استنادًا إلى سجل يضم 200 إجراء سابق",
+      "level": "Applied",
+      "slides": [
+        "day1#agent-actions",
+        "day1#two-axes",
+        "day1#four-modes",
+        "day1#capacity",
+        "day1#stop-right",
+        "day1#replay-method",
+        "day1#checkpoint-3",
+        "capstone#the-system",
+        "capstone#deliverables",
+        "capstone#autonomy-raise"
+      ],
+      "activities": [
+        "day1#checkpoint-3-q1"
+      ],
+      "sessions": [
+        "day1/3"
+      ],
+      "labs": [
+        "1.3"
+      ],
+      "questions": [
+        "q-lo2-1",
+        "q-lo2-2",
+        "q-lo2-3",
+        "q-lo2-4"
+      ],
+      "covered": true
+    },
+    {
+      "id": "LO3",
+      "text": "يصمم مسارًا للاعتراض يبدأ بالإشعار وينتهي بإعادة القرار بشريًا وجبر الضرر، استنادًا إلى مسار قرارات التصاريح",
+      "level": "Performance",
+      "slides": [
+        "day2#evening-drafts",
+        "day2#contest-chain",
+        "day2#plain-notice",
+        "day2#checkpoint-1",
+        "capstone#deliverables"
+      ],
+      "activities": [
+        "day2#checkpoint-1-q1"
+      ],
+      "sessions": [
+        "day2/1"
+      ],
+      "labs": [
+        "2.1"
+      ],
+      "questions": [
+        "q-lo3-1",
+        "q-lo3-2",
+        "q-lo3-3",
+        "q-lo3-4"
+      ],
+      "covered": true
+    },
+    {
+      "id": "LO4",
+      "text": "يصمم إجراءً لمراجعة الأخلاقيات يحدد المحفزات والأعضاء المستقلين والمعايير والسجلات، استنادًا إلى مستويات المخاطر لدى الجهة موضوع الحالة",
+      "level": "Performance",
+      "slides": [
+        "day2#ethics-review",
+        "day2#triggers",
+        "day2#risk-matrix",
+        "day2#independence",
+        "capstone#deliverables",
+        "capstone#board-rounds"
+      ],
+      "activities": [],
+      "sessions": [
+        "day2/1"
+      ],
+      "labs": [
+        "2.1"
+      ],
+      "questions": [
+        "q-lo4-1",
+        "q-lo4-2",
+        "q-lo4-3",
+        "q-lo4-4"
+      ],
+      "covered": true
+    },
+    {
+      "id": "LO5",
+      "text": "يقرر بصفته عضوًا في اللجنة الموافقة على استخدام مقترح للذكاء الاصطناعي أو الموافقة عليه بشروط أو رفضه، استنادًا إلى ملفين",
+      "level": "Performance",
+      "slides": [
+        "day2#conditions",
+        "day2#checkpoint-2",
+        "capstone#deliverables",
+        "capstone#board-rounds"
+      ],
+      "activities": [
+        "day2#checkpoint-2-q1"
+      ],
+      "sessions": [
+        "day2/1"
+      ],
+      "labs": [
+        "2.1"
+      ],
+      "questions": [
+        "q-lo5-1",
+        "q-lo5-2",
+        "q-lo5-3",
+        "q-lo5-4"
+      ],
+      "covered": true
+    }
+  ]
+}

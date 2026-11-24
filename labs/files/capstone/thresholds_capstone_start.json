@@ -1,0 +1,62 @@
+{
+ "_note": "نقطة البداية للمشروع الختامي: كل إجراء تلقائي. صنّف الأنواع واكتب المصفوفة والاستثناءات.",
+ "capacity_per_day": 10,
+ "minutes_per_approval": 5,
+ "approvers": [
+  "O-05",
+  "O-06"
+ ],
+ "action_types": {
+  "send_inspection_summary": {
+   "impact": 1,
+   "reversibility": "reversible"
+  },
+  "issue_warning": {
+   "impact": 1,
+   "reversibility": "reversible"
+  },
+  "issue_fine": {
+   "impact": 1,
+   "reversibility": "reversible"
+  },
+  "schedule_reinspection": {
+   "impact": 1,
+   "reversibility": "reversible"
+  },
+  "waive_fine": {
+   "impact": 1,
+   "reversibility": "reversible"
+  },
+  "publish_compliance_list": {
+   "impact": 1,
+   "reversibility": "reversible"
+  },
+  "suspend_permit": {
+   "impact": 1,
+   "reversibility": "reversible"
+  }
+ },
+ "matrix": {
+  "1": {
+   "reversible": "auto",
+   "costly": "auto",
+   "irreversible": "auto"
+  },
+  "2": {
+   "reversible": "auto",
+   "costly": "auto",
+   "irreversible": "auto"
+  },
+  "3": {
+   "reversible": "auto",
+   "costly": "auto",
+   "irreversible": "auto"
+  },
+  "4": {
+   "reversible": "auto",
+   "costly": "auto",
+   "irreversible": "auto"
+  }
+ },
+ "overrides": []
+}

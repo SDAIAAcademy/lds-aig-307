@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 1.3 · إعادة تشغيل إجراءات الوكيل على العتبات · تصميم الإشراف البشري ومراجعة الأخلاقيات</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D1_3_replay.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day1.html#lab-1-3">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 1.3</span>
+<h1>إعادة تشغيل إجراءات الوكيل على العتبات</h1>
+<p>تصنّف أنواع إجراءات «مُتمِّم» الاثني عشر بالأثر وقابلية التراجع، وتعيد تشغيل 200 إجراء سابق على عتباتك، حتى لا يمر ضار دون أن يُرى ويبقى العبء ضمن الطاقة.</p>
+<div class="meta"><span>75 دقيقة</span><span>اليوم 1</span><span>الجلسة 3: بوابات الموافقة وحق الإيقاف على الوكلاء</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="1.3">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <p>ملف عتبات لـ«مُتمِّم» يصنف أنواع إجراءاته الاثني عشر بالأثر وقابلية التراجع، وناتج إعادة تشغيل 200 إجراء سابق عليه: ما كان سيتوقف للاعتماد في كل يوم، وما مر من الإجراءات التي ثبت ضررها، وصفحة تبرير فيها حق الإيقاف وفصل المهام. هذا دليل الناتج الثاني.</p>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/d1_3/action_types.html" target="_blank"><b>action_types.html</b><span>الأنواع الاثنا عشر، وأجزاء ملف العتبات، وطريقة التشغيل.</span></a>
+    <a href="files/d1_3/mutammim_actions.csv" download><b>mutammim_actions.csv</b><span>سجل 200 إجراء في عشرة أيام عمل، وما عُرف عن كل منها بعد وقوعه.</span></a>
+    <a href="files/d1_3/thresholds_start.json" download><b>thresholds_start.json</b><span>ملف البداية: كل إجراء تلقائي.</span></a>
+    <a href="files/d1_3/replay.py" download><b>replay.py</b><span>البرنامج النصي لإعادة التشغيل. بايثون دون مكتبات ودون اتصال.</span></a>
+    <a href="files/d2_1/risk_levels.html" target="_blank"><b>risk_levels.html</b><span>مستويات الأثر والمخاطر كما يحددها الإطار الوطني، وكما تطبقها الأمانة.</span></a>
+    <a href="files/d1_3/threshold_rationale_template.md" download><b>threshold_rationale_template.md</b><span>صفحة التبرير التي تملؤها.</span></a>
+  </div>
+  <div class="callout tip"><b>كيف تشغّل البرنامج.</b> في مجلد الملفات: <code>uv run replay.py thresholds_start.json</code>، أو <code>python replay.py thresholds_start.json</code> إن كانت بايثون 3.10 أو أحدث مثبتة، أو في JupyterLab أو خدمة دفاتر مستضافة مجانية: ارفع الملفات الثلاثة ثم <code>%run replay.py thresholds_start.json</code>. يمكنك أن تسأل مساعدًا عن صيغة JSON، لا عن تصنيف الأنواع: التصنيف حكمك أنت.</div>
+
+  <h2>الخطوات</h2>
+  <div class="step">
+    <h3>1 · اقرأ السجل وجدول الأنواع، وشغّل البرنامج على ملف البداية <span class="min">10 د</span></h3>
+    <p>شغّل على ملف البداية واقرأ الملخص: كم إجراء ضار مر دون أن يراه أحد؟ ثم انسخ الملف باسم <code>my_thresholds.json</code>.</p>
+  </div>
+  <div class="step">
+    <h3>2 · صنّف أنواع الإجراءات الاثني عشر بالأثر وقابلية التراجع <span class="min">15 د</span></h3>
+    <p>لكل نوع: ما أسوأ ما يصيب الشخص إن أخطأ الإجراء، وهل يُتراجع عنه، وبأي كلفة عليه؟ اكتب الأثر من 1 إلى 4 وقابلية التراجع في <code>action_types</code>. سجّل الأنواع التي ترددت فيها.</p>
+  </div>
+  <div class="step">
+    <h3>3 · املأ المصفوفة، وأعد التشغيل، واقرأ ما مر من الإجراءات الضارة <span class="min">15 د</span></h3>
+    <p>اكتب في <code>matrix</code> وضعًا لكل خانة، ثم <code>uv run replay.py my_thresholds.json --out held.csv</code>. اقرأ ثلاثة أرقام: الضارة التي توقفت، والتي عُرفت بالإخطار بعد وقوعها، والتي مرت دون أن يراها أحد؛ ثم عبء الاعتماد في كل يوم مقابل الطاقة.</p>
+  </div>
+  <div class="step">
+    <h3>4 · أضف استثناءات حتى لا يمر ضار دون أن يُرى، ضمن الطاقة <span class="min">15 د</span></h3>
+    <p>افتح <code>held.csv</code> والسجل: ما الذي يميز الإجراء الضار عن غيره من النوع نفسه؟ المبلغ، أو عدد المستلمين، أو قناة مقدم الطلب، أو تكرار الإجراء على الملف. أضف في <code>overrides</code> ما يلزم وأعد التشغيل. إن تجاوز يوم الطاقة فاكتب ماذا يحدث فيه.</p>
+  </div>
+  <div class="step">
+    <h3>5 · اكتب حق الإيقاف وفصل المهام وتبرير العتبات في صفحة واحدة <span class="min">20 د</span></h3>
+    <p>املأ <code>threshold_rationale_template.md</code>: جدول الناتج قبل وبعد، ولماذا هذه العتبات، ومن يملك إيقاف «مُتمِّم» كله ومتى، ومن يعتمد الإجراء المتوقف ومن لا يعتمده. سلّم ملف العتبات والصفحة.</p>
+  </div>
+  <div class="step stretch">
+    <h3>✱ إضافي</h3>
+    <p>صار «مُتمِّم» يلغي التصريح بعد ثلاثة تذكيرات بتجديد لم يُدفع: أضف النوع، وقرر وضعه، وقدّر أثره في العبء اليومي.</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>لو أوقفت كل إجراء أثره متوسط أو أعلى، ماذا يحدث لطاقة المعتمدَين، ولماذا يعود ذلك على الإشراف نفسه؟</li>
+    <li>إجراء ضار عُرف بالإخطار بعد وقوعه: متى يكون هذا مقبولًا، ومتى لا يكون؟</li>
+    <li>لماذا لا يعتمد المعتمد إجراءً على ملف مسند إليه، حتى لو كان الأسرع؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب</summary>
+    <p>ملف البداية يمرر الإجراءات الضارة الستة عشر كلها دون أن يراها أحد. الملف المرجعي في <code>solutions/reference/thresholds_reference.json</code> وناتجه في <code>replay_reference.json</code>: يتوقف 77 إجراءً في عشرة أيام (7.7 في اليوم، وأقصاه 12 في يوم واحد يتجاوز الطاقة)، وتتوقف 15 من الضارة، ويُعرف واحد بالإخطار، ولا يمر شيء دون أن يُرى. ليس الحل الوحيد: كل ملف عتبات لا يمرر ضارًا دون أن يُرى، ويبقى معدله اليومي ضمن الطاقة، ويبرر تصنيفه، مقبول.</p>
+    <p>إعادة التشغيل نفسها تتحقق منها بـ<code>node labs/solutions/check.mjs</code>؛ وتشغيل <code>replay.py</code> على ملف المشارك يعطيك أرقامه. احذف <code>held.csv</code> من أي نسخة تعيدها إلى المستودع.</p>
+    <p>التقدير (9 من 35): تصنيف مبرر للأنواع الاثني عشر (2)، ولا ضار يمر دون أن يُرى (2)، والمعدل اليومي ضمن الطاقة ويوم التجاوز مكتوب ما يحدث فيه (2)، وحق الإيقاف باسم مالك ومحفز وإعادة تشغيل بدليل (2)، وفصل المهام مكتوب ويظهر في الناتج (1).</p>
+    <p>الفخاخ: إيقاف كل ما أثره 2 أو أكثر (متوسط 14.5 في اليوم، وتسعة أيام فوق الطاقة: يصير الاعتماد شكليًا)؛ وإيقاف ما أثره 3 فقط (يمر سبعة من الضارة دون أن تُرى)؛ وتصنيف إحالة الملف إلى فريق المعاينة «يُتراجع عنه» مع أن البيانات إذا شوركت لا تُسترد؛ وجعل مالكة النظام نفسها صاحبة حق الإيقاف وحدها.</p>
+    <p>الإضافي: إلغاء التصريح أثره مرتفع على الأقل (يتوقف دخل الشخص) ويُتراجع عنه بكلفة، فيتوقف للاعتماد؛ ولأنه لا يظهر في السجل فالعبء تقدير: مع الملف المرجعي يبقى بين المعدل اليومي والطاقة 2.3 اعتماد، وفي أكثر الأيام ازدحامًا لا يبقى شيء.</p>
+  </details>
+</article>
+<nav class="pager"><a href="D1_2_redesign.html" rel="prev">→ المختبر السابق</a><a href="D2_1_board.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · تصميم الإشراف البشري ومراجعة الأخلاقيات<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-24⁩ · الإيداع a09dc22</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-24T22:21:54Z","version":"2027.1.0","commit":"a09dc22"},"course":{"id":"lds-aig-307","code":"LDS-AIG-307","title":"تصميم الإشراف البشري ومراجعة الأخلاقيات","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-aig-307/","repo":"SDAIAAcademy/lds-aig-307","home":"../index.html"},"lab":{"id":"1.3","title":"إعادة تشغيل إجراءات الوكيل على العتبات","summary":"تصنّف أنواع إجراءات «مُتمِّم» الاثني عشر بالأثر وقابلية التراجع، وتعيد تشغيل 200 إجراء سابق على عتباتك، حتى لا يمر ضار دون أن يُرى ويبقى العبء ضمن الطاقة.","minutes":75,"day":1,"unit":"اليوم 1","session":3,"deck":"../slides/day1.html#lab-1-3","prev":"D1_2_redesign.html","next":"D2_1_board.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>
